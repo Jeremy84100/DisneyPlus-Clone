@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 interface Movie {
+  [x: string]: any;
   id: number;
   title: string;
   poster_path: string;
