@@ -30,20 +30,51 @@ const Category = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
 
-  const fetchMovies = async () => {
-    let movies: Movie[] = [];
-    let page = 1;
-    while (movies.length < 100) {
+  const fetchMedia = async (mediaType: string, withCompanies: number) => {
+    const targetNumResults = 15;
+
+    let numResultsFetched = 0;
+    let media: (Movie | TVShow)[] = [];
+
+    while (numResultsFetched < targetNumResults) {
       const response = await fetch(
-        `https://api.themoviedb.org/3/discover/movie?api_key=c2488b11f741864d8521bcc627cbfc91&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
+        `https://api.themoviedb.org/3/discover/${mediaType}?api_key=c2488b11f741864d8521bcc627cbfc91&language=en-US&include_adult=false&with_companies=${withCompanies}`
       );
       const data = await response.json();
-      movies = movies.concat(data.results);
-      page++;
+      const results = data.results;
+
+      media.push(...results);
+      numResultsFetched += results.length;
     }
-    setMovies(movies.slice(0, 100));
+
+    return media;
   };
 
+  const fetchAllMedia = async () => {
+    const [
+      disneyMovies,
+      pixarMovies,
+      marvelMovies,
+      starWarsMovies,
+      nationalGeographicMovies,
+    ] = await Promise.all([
+      fetchMedia("movie", 3),
+      fetchMedia("movie", 2),
+      fetchMedia("movie", 7505),
+      fetchMedia("movie", 1),
+      fetchMedia("movie", 7521),
+    ]);
+    const allMedia: (Movie | TVShow)[] = [
+      ...disneyMovies,
+      ...pixarMovies,
+      ...marvelMovies,
+      ...starWarsMovies,
+      ...nationalGeographicMovies,
+    ];
+    setMovies(
+      allMedia.filter((media) => media.hasOwnProperty("title")) as Movie[]
+    );
+  };
 
   useEffect(() => {
     const fetchGenres = async () => {
@@ -71,7 +102,7 @@ const Category = () => {
     };
 
     fetchGenres();
-    fetchMovies();
+    fetchAllMedia();
   }, []);
 
   const settings = {
