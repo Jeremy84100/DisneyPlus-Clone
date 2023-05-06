@@ -43,7 +43,7 @@ const Search = () => {
       {movies.length === 0 && (
         <p className="text-2xl font-medium pt-52 text-center">{`No results found for "${search}"`}</p>
       )}
-      <div className="grid grid-cols-5 gap-4 pt-44">
+      <div className="grid grid-cols-5 gap-5 pt-44">
         {movies.slice(0, 20).map((movie: Movie, index: number) => (
           <div
             className={`col-start-${(index % 5) + 1} row-${

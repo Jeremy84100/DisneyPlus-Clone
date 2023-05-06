@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Card from "./Card";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
@@ -12,99 +11,15 @@ interface Movie {
   genre_ids: number[];
 }
 
-interface TVShow {
-  id: number;
-  name: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
 interface Genre {
   id: number;
   name: string;
   movies: Movie[];
-  tvShows: TVShow[];
 }
 
-const Category = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
-  const [genres, setGenres] = useState<Genre[]>([]);
 
-  const fetchMedia = async (mediaType: string, withCompanies: number) => {
-    const targetNumResults = 15;
-
-    let numResultsFetched = 0;
-    let media: (Movie | TVShow)[] = [];
-
-    while (numResultsFetched < targetNumResults) {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/discover/${mediaType}?api_key=c2488b11f741864d8521bcc627cbfc91&language=en-US&include_adult=false&with_companies=${withCompanies}`
-      );
-      const data = await response.json();
-      const results = data.results;
-
-      media.push(...results);
-      numResultsFetched += results.length;
-    }
-
-    return media;
-  };
-
-  const fetchAllMedia = async () => {
-    const [
-      disneyMovies,
-      pixarMovies,
-      marvelMovies,
-      starWarsMovies,
-      nationalGeographicMovies,
-    ] = await Promise.all([
-      fetchMedia("movie", 3),
-      fetchMedia("movie", 2),
-      fetchMedia("movie", 7505),
-      fetchMedia("movie", 1),
-      fetchMedia("movie", 7521),
-    ]);
-    const allMedia: (Movie | TVShow)[] = [
-      ...disneyMovies,
-      ...pixarMovies,
-      ...marvelMovies,
-      ...starWarsMovies,
-      ...nationalGeographicMovies,
-    ];
-    setMovies(
-      allMedia.filter((media) => media.hasOwnProperty("title")) as Movie[]
-    );
-  };
-
-  useEffect(() => {
-    const fetchGenres = async () => {
-      const response = await fetch(
-        `https://api.themoviedb.org/3/genre/movie/list?api_key=c2488b11f741864d8521bcc627cbfc91`
-      );
-      const data = await response.json();
-      const genreData: Genre[] = [];
-
-      for (const genre of data.genres) {
-        const genreMovies = movies.filter((movie) =>
-          movie.genre_ids.includes(genre.id)
-        );
-        if (genreMovies.length >= 15) {
-          genreData.push({
-            id: genre.id,
-            name: genre.name,
-            movies: genreMovies.slice(0, 15),
-            tvShows: [],
-          });
-        }
-      }
-
-      setGenres(genreData);
-    };
-
-    fetchGenres();
-    fetchAllMedia();
-  }, []);
-
+const Category = ({ genres }: { genres: any }) => {
+ 
   const settings = {
     dots: false,
     infinite: false,

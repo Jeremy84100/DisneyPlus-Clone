@@ -2,12 +2,13 @@ import Brand from "@/components/layouts/MainLayout/Components/Brand";
 import Category from "@/components/layouts/MainLayout/Components/Category";
 import SliderHeader from "@/components/layouts/MainLayout/Components/SliderHeader";
 
-const Home = () => {
+
+const Home = ({ genres }: { genres: any }) => {
   return (
     <div>
       <SliderHeader />
       <Brand />
-      <Category />
+      <Category genres={genres} />
     </div>
   );
 };

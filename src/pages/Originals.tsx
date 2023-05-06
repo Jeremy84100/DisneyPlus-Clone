@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import originals from "@/assets/images/ORIGINALS.png";
 import Category from "@/components/layouts/MainLayout/Components/Category";
 
-const Originals = () => {
+const Originals = ({ genres }: { genres: any }) => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +18,7 @@ const Originals = () => {
     <div>
       <div className="bg-background w-full left-0 fixed flex justify-center z-10 text-center top-72px">
         <img
-          className={`mt-9 ${
+          className={`mt-6 ${
             scrolled ? "h-32" : " h-48"
           } transition-all duration-500 ease-in-out`}
           src={originals}
@@ -29,7 +29,7 @@ const Originals = () => {
         className={` ${
           scrolled ? "mt-64" : "mt-64"
         } transition-all duration-300 ease-in-out`}>
-        <Category />
+        <Category genres={genres} />
       </div>
     </div>
   );

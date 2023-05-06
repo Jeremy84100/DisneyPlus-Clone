@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-interface Movie {
+interface Media {
   [x: string]: any;
   id: number;
   title: string;
@@ -8,7 +8,12 @@ interface Movie {
   genre_ids: number[];
 }
 
-const Card = ({ movie }: { movie: Movie }) => {
+interface CardProps {
+  movie?: Media;
+  tvShow?: Media;
+}
+
+const Card = ({ movie, tvShow }: CardProps) => {
   const handleOnMouseOver = (e: React.MouseEvent<HTMLImageElement>) => {
     const sibling = e.currentTarget.nextElementSibling;
     if (sibling) {
@@ -25,12 +30,18 @@ const Card = ({ movie }: { movie: Movie }) => {
     }
   };
 
+  const media = movie || tvShow;
+
+  if (!media) {
+    return null;
+  }
+
   return (
     <Link to="/">
       <div className="relative">
         <img
-          src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
-          alt={movie.title}
+          src={`https://image.tmdb.org/t/p/original/${media.backdrop_path}`}
+          alt={media.title}
           className="object-cover inset-0 w-full h-full z-10 rounded transition-all duration-300 hover:shadow-xlb hover:shadow-black shadow-3lg hover:scale-105"
           onMouseOver={handleOnMouseOver}
           onMouseOut={handleOnMouseOut}

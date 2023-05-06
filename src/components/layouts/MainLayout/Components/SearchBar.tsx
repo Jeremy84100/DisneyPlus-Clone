@@ -26,7 +26,7 @@ const SearchBar = ({ setSearch, search }: SearchBarProps) => {
         <input
           type="text"
           placeholder="Search by title, character, or genre"
-          className="fixed left-0 text-44px font-medium h-24 w-full py-5 px-5% text-zinc-400 placeholder:text-zinc-400 bg-zinc-600 focus:outline-none focus:bg-zinc-500 focus:text-zinc-100 outline-none focus:placeholder:text-zinc-100 transition-all duration-300"
+          className="fixed z-10 left-0 text-44px font-medium h-24 w-full py-5 px-5% text-zinc-400 placeholder:text-zinc-400 bg-zinc-600 focus:outline-none focus:bg-zinc-500 focus:text-zinc-100 outline-none focus:placeholder:text-zinc-100 transition-all duration-300"
           value={search}
           onChange={handleSearch}
         />
