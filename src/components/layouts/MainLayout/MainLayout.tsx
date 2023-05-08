@@ -1,12 +1,12 @@
 import Header from "./Components/Header/Header";
 import Background from "./Components/Background";
 
-import Home from "../../../pages/Home";
-import Search from "../../../pages/Search";
-import Watchlist from "../../../pages/Watchlist";
-import Originals from "../../../pages/Originals";
-import Movies from "../../../pages/Movies";
-import Series from "../../../pages/Series";
+import Home from "@/pages/Home";
+import Search from "@/pages/Search";
+import Watchlist from "@/pages/Watchlist";
+import Originals from "@/pages/Originals";
+import Movies from "@/pages/Movies";
+import Series from "@/pages/Series";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -156,7 +156,7 @@ const MainLayout = () => {
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/originals" element={<Originals genres={genres} />} />
           <Route path="/movies" element={<Movies movies={movies} />} />
-          <Route path="/series" element={<Series tvShows={tvShows}/>} />
+          <Route path="/series" element={<Series tvShows={tvShows} />} />
         </Routes>
       </main>
       <Footer />
