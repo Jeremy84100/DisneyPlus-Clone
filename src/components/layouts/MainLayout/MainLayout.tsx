@@ -38,21 +38,28 @@ const MainLayout = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [tvShows, setTVShows] = useState<TVShow[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
+  
 
   const fetchMedia = async (mediaType: string, withCompanies: number) => {
-    const targetNumResults = 20;
+    const targetNumResults = 10;
     let numResultsFetched = 0;
+    let pageNum = 1;
     let media: (Movie | TVShow)[] = [];
 
     while (numResultsFetched < targetNumResults) {
       const response = await fetch(
-        `https://api.themoviedb.org/3/discover/${mediaType}?api_key=c2488b11f741864d8521bcc627cbfc91&language=en-US&include_adult=false&with_companies=${withCompanies}`
+        `https://api.themoviedb.org/3/discover/${mediaType}?api_key=c2488b11f741864d8521bcc627cbfc91&language=en-US&include_adult=false&with_companies=${withCompanies}&page=${pageNum}`
       );
       const data = await response.json();
       const results = data.results;
 
       media.push(...results);
       numResultsFetched += results.length;
+      pageNum++;
+
+      if (pageNum > data.total_pages) {
+        break;
+      }
     }
 
     return media;
@@ -67,12 +74,10 @@ const MainLayout = () => {
       nationalGeographicMovies,
     ] = await Promise.all([
       fetchMedia("movie", 3),
-      fetchMedia("movie", 2),
-      fetchMedia("movie", 7505),
-      fetchMedia("movie", 1),
-      fetchMedia("tv", 7521),
       fetchMedia("tv", 3),
+      fetchMedia("movie", 1),
       fetchMedia("tv", 2),
+      fetchMedia("movie", 2),
       fetchMedia("tv", 1),
     ]);
     const allMedia: (Movie | TVShow)[] = [
@@ -107,7 +112,7 @@ const MainLayout = () => {
       const genreTVShows = tvShows.filter((tvShow) =>
         tvShow.genre_ids.includes(genre.id)
       );
-      if (genreMovies.length >= 15 || genreTVShows.length >= 15) {
+      if (genreMovies.length >= 15) {
         genreData.push({
           id: genre.id,
           name: genre.name,
@@ -155,8 +160,8 @@ const MainLayout = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/originals" element={<Originals genres={genres} />} />
-          <Route path="/movies" element={<Movies movies={movies} />} />
-          <Route path="/series" element={<Series tvShows={tvShows} />} />
+          <Route path="/movies" element={<Movies movies={movies} genres={genres} />} />
+          <Route path="/series" element={<Series tvShows={tvShows} genres={genres} />} />
         </Routes>
       </main>
       <Footer />

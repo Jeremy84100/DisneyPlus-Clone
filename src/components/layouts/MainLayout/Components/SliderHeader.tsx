@@ -207,7 +207,7 @@ const Carousel = styled(Slider)`
   }
 
   ul.slick-dots {
-    bottom: 30px;
+    bottom: 35px;
     right: 20px;
     text-align: right;
     width: 100%;
