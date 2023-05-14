@@ -8,12 +8,14 @@ interface Media {
   genre_ids: number[];
 }
 
+
 interface CardProps {
   movie?: Media;
   tvShow?: Media;
 }
 
 const Card = ({ movie, tvShow }: CardProps) => {
+  
   const handleOnMouseOver = (e: React.MouseEvent<HTMLImageElement>) => {
     const sibling = e.currentTarget.nextElementSibling;
     if (sibling) {
@@ -36,11 +38,13 @@ const Card = ({ movie, tvShow }: CardProps) => {
     return null;
   }
 
+  const mediaType = movie ? "movie" : "tv";
+
   return (
-    <Link to="/">
+    <Link to={`/${mediaType}s/${media.id}`} >
       <div className="relative">
         <img
-          src={`https://image.tmdb.org/t/p/original/${media.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/w500/${media.backdrop_path}`}
           alt={media.title}
           className="object-cover inset-0 w-full h-full z-10 rounded transition-all duration-300 hover:shadow-xlb hover:shadow-black shadow-3lg hover:scale-105"
           onMouseOver={handleOnMouseOver}

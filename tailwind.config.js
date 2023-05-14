@@ -39,6 +39,8 @@ export default {
       },
       spacing: {
         '72px': '72px',
+        '4.5' : '1.125rem',
+        '0.75' : '0.1875rem',
       },
     },
   },

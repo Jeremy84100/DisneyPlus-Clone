@@ -7,6 +7,7 @@ import Watchlist from "@/pages/Watchlist";
 import Originals from "@/pages/Originals";
 import Movies from "@/pages/Movies";
 import Series from "@/pages/Series";
+import MediaPage from "@/pages/MediaPage";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -38,7 +39,6 @@ const MainLayout = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [tvShows, setTVShows] = useState<TVShow[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
-  
 
   const fetchMedia = async (mediaType: string, withCompanies: number) => {
     const targetNumResults = 10;
@@ -160,8 +160,16 @@ const MainLayout = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/watchlist" element={<Watchlist />} />
           <Route path="/originals" element={<Originals genres={genres} />} />
-          <Route path="/movies" element={<Movies movies={movies} genres={genres} />} />
-          <Route path="/series" element={<Series tvShows={tvShows} genres={genres} />} />
+          <Route
+            path="/movies"
+            element={<Movies movies={movies} genres={genres} />}
+          />
+          <Route
+            path="/series"
+            element={<Series tvShows={tvShows} genres={genres} />}
+          />
+          <Route path="/movies/:id" element={<MediaPage />} />
+          <Route path="/series/:id" element={<MediaPage />} />
         </Routes>
       </main>
       <Footer />

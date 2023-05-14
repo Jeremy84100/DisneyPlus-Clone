@@ -32,9 +32,14 @@ interface TVShowGenre extends Genre {
 interface FiltersProps {
   genres: (MovieGenre | TVShowGenre | Genre)[];
   handleSelectedGenre: (genre: Genre) => void;
+  selectedGenre: Genre;
 }
 
-const Filters = ({ genres, handleSelectedGenre }: FiltersProps) => {
+const Filters = ({
+  genres,
+  handleSelectedGenre,
+  selectedGenre,
+}: FiltersProps) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [isDivVisible, setDivVisible] = useState(false);
 
@@ -94,10 +99,18 @@ const Filters = ({ genres, handleSelectedGenre }: FiltersProps) => {
             return (
               <div
                 key={genre.id}
-                className="flex cursor-pointer py-1 items-center transition-all duration-200 hover:bg-neutral-800"
+                className="texthover flex cursor-pointer items-center transition-all duration-200 hover:bg-neutral-800 "
                 onClick={() => handleGenreClick(genre)}>
-                <p className="pl-3 font-medium text-xs">|</p>
-                <h1 className="text-stone-300 hover:text-white transition-all duration-200 pl-3 pr-5 font-light text-sm">
+                <p
+                  className={`pl-3 font-medium text-xs ${
+                    genre === selectedGenre ? "opacity-100" : "opacity-0"
+                  }`}>
+                  |
+                </p>
+                <h1
+                  className={`text-stone-300 hover:text-white py-1 transition-all duration-200 pl-3 pr-5 font-light text-sm ${
+                    genre === selectedGenre ? "font-semibold" : "font-medium"
+                  }`}>
                   {genre.name}
                 </h1>
               </div>
