@@ -37,11 +37,10 @@ interface Media {
 const MediaPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [media, setMedia] = useState<Media | null>(null);
-  const [showDiv, setShowDiv] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
-    const position = window.pageYOffset;
+    const position = window.scrollY;
     setScrollPosition(position);
   };
 
@@ -52,18 +51,20 @@ const MediaPage: React.FC = () => {
     };
   }, []);
 
-  const interpolateOpacity = (
-    position: number,
-    maxOpacity: number,
-    power: number
-  ): number => {
-    const normalizedPosition = position / window.innerHeight;
-    return 1 - Math.pow(normalizedPosition, power) * (1 - maxOpacity);
+  const interpolateOpacity = (position: number, power: number): number => {
+    const maxOpacity = 0.1;
+    const normalizedPosition =
+      position /
+      (window.document.documentElement.scrollHeight - window.innerHeight);
+    return (
+      1 -
+      Math.pow(Math.min(Math.max(normalizedPosition, 0), 1), power) *
+        (1 - maxOpacity)
+    );
   };
 
-  const maxOpacity = 0.2;
-  const power = 0.4;
-  const rooOpacity = interpolateOpacity(scrollPosition, maxOpacity, power);
+  const power = 0.6;
+  const rooOpacity = interpolateOpacity(scrollPosition, power);
 
   useEffect(() => {
     const fetchMedia = async () => {
@@ -120,22 +121,19 @@ const MediaPage: React.FC = () => {
       };
 
       setMedia(media);
-      setShowDiv(true);
     };
 
     fetchMedia();
   }, [id]);
 
   if (!media) {
-    return <div>Loading...</div>;
+    return null;
   }
 
   return (
     <article className="flex flex-col pb-14">
       <div
-        className={`roo fixed -z-10 left-0 right-0 top-0 w-full transition-opacity ${
-          showDiv ? "opacity-100" : "opacity-0"
-        }  duration-500 ease-in-out`}
+        className="fixed opacity-0 -z-10 left-0 right-0 top-0 w-full transition-opacity"
         style={{ opacity: rooOpacity }}>
         <img
           src={`https://image.tmdb.org/t/p/original/${media.backdrop_path}`}

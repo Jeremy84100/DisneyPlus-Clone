@@ -40,19 +40,23 @@ const Search = () => {
   return (
     <div>
       <SearchBar setSearch={setSearch} search={search} />
+
       {movies.length === 0 && (
         <p className="text-2xl font-medium pt-52 text-center">{`No results found for "${search}"`}</p>
       )}
-      <div className="grid grid-cols-5 gap-5 pt-44">
-        {movies.slice(0, 20).map((movie: Movie, index: number) => (
-          <div
-            className={`col-start-${(index % 5) + 1} row-${
-              Math.floor(index / 5) + 1
-            }`}
-            key={movie.id}>
-            <Card movie={movie} />
-          </div>
-        ))}
+      <div className="pt-36">
+        {search === "" && <p className="text-xl font-medium mb-5">Explore</p>}
+        <div className="grid grid-cols-2 laptopL:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 gap-5 ">
+          {movies.slice(0, 20).map((movie: Movie, index: number) => (
+            <div
+              className={`col-start-${(index % 5) + 1} row-${
+                Math.floor(index / 5) + 1
+              }`}
+              key={movie.id}>
+              <Card movie={movie} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

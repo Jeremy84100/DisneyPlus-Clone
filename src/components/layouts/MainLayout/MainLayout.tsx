@@ -13,6 +13,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Footer from "./Components/Footer";
+import BrandPage from "@/pages/BrandPage";
 
 interface Movie {
   id: number;
@@ -168,6 +169,7 @@ const MainLayout = () => {
             path="/series"
             element={<Series tvShows={tvShows} genres={genres} />}
           />
+          <Route path="/brand/:brand" element={<BrandPage genres={genres} />} />
           <Route path="/movies/:id" element={<MediaPage />} />
           <Route path="/series/:id" element={<MediaPage />} />
         </Routes>

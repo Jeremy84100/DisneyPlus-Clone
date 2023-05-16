@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 
 import disneyLogo from "@/assets/images/disney-logo.svg";
 
@@ -61,25 +62,72 @@ const Menu = () => {
         <Link
           key={index}
           to={item.path}
-          className="flex flex-row items-center p-4 relative group">
-          <span>
-            <svg className="fill-white w-6 h-6" viewBox="0 -5 45 45">
-              <path
-                d={item.icon}
-                className="flex items-center justify-center"></path>
-            </svg>
-          </span>
-          <div className="mx-1 my-2 relative">
+          className={`flex flex-row items-center p-4 max-lg:px-3 max-lg:py-5 group ${
+            item.title === "ORIGINALS" ||
+            item.title === "MOVIES" ||
+            item.title === "SERIES"
+              ? "relative max-lg:hidden"
+              : "relative"
+          }`}>
+          <svg
+            className={`fill-white w-6 h-6 flex items-center justify-center ${
+              item.title === "WATCHLIST"
+                ? "max-lg:h-6 max-lg:w-6 mt-1"
+                : "max-lg:h-7 max-lg:w-7"
+            }`}
+            viewBox="0 -5 45 45">
+            <path d={item.icon}></path>
+          </svg>
+          <div className="mx-1 my-2 relative max-lg:hidden">
             <p className="text-sm tracking-wider p-0.5">{item.title}</p>
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-white opacity-0 transition-all ease-in-out duration-300 group-hover:w-full group-hover:opacity-100"></span>
           </div>
         </Link>
       ))}
+      <Responsive className="py-4 px-3 cursor-pointer relative lg:hidden">
+        <svg
+          className="fill-white w-6 h-6"
+          color="#f9f9f9"
+          viewBox="0 -5 40 40">
+          <path d="M19.53 28.827h-2.933a1.048 1.048 0 0 1-1.048-1.047v-2.933c0-.579.47-1.048 1.048-1.048h2.933c.578 0 1.047.47 1.047 1.048v2.933c0 .578-.469 1.047-1.047 1.047zm0-8.799h-2.933a1.048 1.048 0 0 1-1.048-1.047v-2.933c0-.579.47-1.048 1.048-1.048h2.933c.578 0 1.047.469 1.047 1.048v2.933c0 .578-.469 1.047-1.047 1.047zm0-8.8h-2.933a1.048 1.048 0 0 1-1.048-1.047V7.248c0-.578.47-1.047 1.048-1.047h2.933c.578 0 1.047.469 1.047 1.047v2.933c0 .579-.469 1.048-1.047 1.048z"></path>
+        </svg>
+        <span className="absolute top-14 py-1.5 pl-4 pr-9 z-10 flex flex-col bg-neutral-900 border border-neutral-700 rounded transition-all duration-300 ease-out">
+          {MenuData.slice(3).map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              className="flex flex-row items-center relative">
+              <svg
+                className="fill-white w-7 h-7 flex items-center justify-center"
+                viewBox="0 -5 45 45">
+                <path d={item.icon}></path>
+              </svg>
+              <div className="mx-1 my-3 relative">
+                <p className="text-sm tracking-widest">{item.title}</p>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-white opacity-0 transition-all ease-in-out duration-300 group-hover:w-full group-hover:opacity-100"></span>
+              </div>
+            </Link>
+          ))}
+        </span>
+      </Responsive>
       <div className="menu__right">
         <a href="#"></a>
       </div>
     </div>
   );
 };
+
+const Responsive = styled.span`
+  &:hover {
+    span {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  span {
+    opacity: 0;
+    visibility: hidden;
+  }
+`;
 
 export default Menu;

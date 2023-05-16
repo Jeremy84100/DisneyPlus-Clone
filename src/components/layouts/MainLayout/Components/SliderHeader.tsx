@@ -10,8 +10,8 @@ import theSimpsonsBackground from "@/assets/images/slider-header/the-simpsons/th
 import theSimpsonsLogo from "@/assets/images/slider-header/the-simpsons/the-simpsons-logo.png";
 import spidermanBackground from "@/assets/images/slider-header/spiderman/spiderman-background.jpg";
 import spidermanLogo from "@/assets/images/slider-header/spiderman/spiderman-logo.png";
-import madeInFrance from "@/assets/images/slider-header/made-in-france/made-in-france-background.png";
-import madeInFranceLogo from "@/assets/images/slider-header/made-in-france/made-in-france-logo.png";
+import peterPanBackground from "@/assets/images/slider-header/peter-pan/peter-pan-background.jpg";
+import peterPanLogo from "@/assets/images/slider-header/peter-pan/peter-pan-logo.png";
 import mickeyMouse from "@/assets/images/slider-header/mickey-mouse/mickey-mouse-background.jpg";
 import mickeyMouseLogo from "@/assets/images/slider-header/mickey-mouse/mickey-mouse-logo.png";
 
@@ -21,26 +21,31 @@ const SliderHeader = () => {
       background: lionKingBackground,
       logo: lionKingLogo,
       title: "The Lion King",
+      path: "/movies/420818"
     },
     {
       background: theSimpsonsBackground,
       logo: theSimpsonsLogo,
       title: "The Simpsons",
+      path: "/series/456"
     },
     {
       background: spidermanBackground,
       logo: spidermanLogo,
       title: "Spiderman",
+      path: "/movies/429617"
     },
     {
-      background: madeInFrance,
-      logo: madeInFranceLogo,
-      title: "Made in France",
+      background: peterPanBackground,
+      logo: peterPanLogo,
+      title: "Peter Pan & Wendy",
+      path: "/movies/420808"
     },
     {
       background: mickeyMouse,
       logo: mickeyMouseLogo,
       title: "Mickey Mouse",
+      path: "/series/127633"
     },
   ];
 
@@ -105,7 +110,7 @@ const SliderHeader = () => {
   return (
     <Carousel {...settings}>
       {SliderHeaderData.map((item, index) => (
-        <Link to="/" key={index} className="relative my-6">
+        <Link to={`${item.path}`} key={index} className="relative my-6">
           <img
             src={item.background}
             alt={item.title}

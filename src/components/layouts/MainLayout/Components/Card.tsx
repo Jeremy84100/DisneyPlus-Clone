@@ -38,10 +38,10 @@ const Card = ({ movie, tvShow }: CardProps) => {
     return null;
   }
 
-  const mediaType = movie ? "movie" : "tv";
+  const mediaType = movie ? "movies" : "series";
 
   return (
-    <Link to={`/${mediaType}s/${media.id}`} >
+    <Link to={`/${mediaType}/${media.id}`} >
       <div className="relative">
         <img
           src={`https://image.tmdb.org/t/p/w500/${media.backdrop_path}`}

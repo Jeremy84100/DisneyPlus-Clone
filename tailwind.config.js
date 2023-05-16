@@ -41,6 +41,18 @@ export default {
         '72px': '72px',
         '4.5' : '1.125rem',
         '0.75' : '0.1875rem',
+        '35vw': '35vw',
+        '30vw': '30vw',
+      },
+      transitionDuration: {
+        '1500': '1500ms',
+      },
+      minHeight: {
+        '170': '170px',
+      },
+      screens: {
+        'laptopL': '1441px',
+
       },
     },
   },

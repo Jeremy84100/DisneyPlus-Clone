@@ -75,7 +75,7 @@ const Brand = () => {
   };
 
   return (
-    <div className="flex flex-row -ml-5 pb-6">
+    <div className="grid grid-cols-3 lg:grid-cols-6 pb-6">
       {brandData.map((data, index) => (
         <Link
           key={index}
