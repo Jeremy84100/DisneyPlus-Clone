@@ -17,7 +17,9 @@ interface Genre {
   movies: Movie[];
 }
 
+
 const Category = ({ genres }: { genres: any }) => {
+ 
   const settings = {
     dots: false,
     infinite: false,

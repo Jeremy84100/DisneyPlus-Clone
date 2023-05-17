@@ -69,22 +69,31 @@ const Menu = () => {
               ? "relative max-lg:hidden"
               : "relative"
           }`}>
-          <svg
-            className={`fill-white w-6 h-6 flex items-center justify-center ${
-              item.title === "WATCHLIST"
-                ? "max-lg:h-6 max-lg:w-6 mt-1"
-                : "max-lg:h-7 max-lg:w-7"
-            }`}
-            viewBox="0 -5 45 45">
-            <path d={item.icon}></path>
-          </svg>
+          <div className="relative">
+            <svg
+              className={`fill-white w-6 h-6 flex items-center mbq-0.5 justify-center ${
+                item.title === "WATCHLIST"
+                  ? "max-lg:h-6 max-lg:w-6 mt-1"
+                  : "max-lg:h-7 max-lg:w-7"
+              }`}
+              viewBox="0 -5 45 45">
+              <path d={item.icon}></path>
+            </svg>
+            <span
+              className={`absolute lg:hidden bottom-0 left-0 right-0 h-0.5 w-0 bg-white opacity-0 transition-all ease-in-out duration-300 group-hover:opacity-100 ${
+                item.title === "WATCHLIST"
+                  ? "group-hover:w-4"
+                  : "group-hover:w-6"
+              } `}
+            />
+          </div>
           <div className="mx-1 my-2 relative max-lg:hidden">
             <p className="text-sm tracking-wider p-0.5">{item.title}</p>
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-white opacity-0 transition-all ease-in-out duration-300 group-hover:w-full group-hover:opacity-100"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-white opacity-0 transition-all ease-in-out duration-300 group-hover:w-full group-hover:opacity-100" />
           </div>
         </Link>
       ))}
-      <Responsive className="py-4 px-3 cursor-pointer relative lg:hidden">
+      <Responsive className="py-4 px-3 cursor-pointer relative lg:hidden group">
         <svg
           className="fill-white w-6 h-6"
           color="#f9f9f9"
@@ -96,15 +105,15 @@ const Menu = () => {
             <Link
               key={index}
               to={item.path}
-              className="flex flex-row items-center relative">
+              className="flex flex-row items-center relative group/responsive">
               <svg
                 className="fill-white w-7 h-7 flex items-center justify-center"
                 viewBox="0 -5 45 45">
                 <path d={item.icon}></path>
               </svg>
               <div className="mx-1 my-3 relative">
-                <p className="text-sm tracking-widest">{item.title}</p>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-white opacity-0 transition-all ease-in-out duration-300 group-hover:w-full group-hover:opacity-100"></span>
+                <p className="text-sm tracking-widest p-0.5">{item.title}</p>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 rounded-full bg-white opacity-0 transition-all ease-in-out duration-300 group-hover/responsive:w-full group-hover/responsive:opacity-100"></span>
               </div>
             </Link>
           ))}
