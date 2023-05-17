@@ -75,11 +75,11 @@ const Brand = () => {
   };
 
   return (
-    <div className="grid grid-cols-3 lg:grid-cols-6 pb-6">
+    <div className="grid grid-cols-3 lg:grid-cols-6 gap-5 pb-6">
       {brandData.map((data, index) => (
         <Link
           key={index}
-          className="relative mt-5 ml-5 bg-gradient-to-b from-gray-disney-light from-50% to-gray-disney rounded-2lg overflow-hidden transform transition-all shadow-black shadow-2lg hover:shadow-xlb hover:shadow-black duration-300 hover:scale-105"
+          className="relative mt-5 bg-gradient-to-b from-gray-disney-light from-50% to-gray-disney rounded-2lg overflow-hidden transform transition-all shadow-black shadow-2lg hover:shadow-xlb hover:shadow-black duration-300 hover:scale-105"
           to={data.link}>
           <img
             className="relative z-10 inset-0 w-full h-full object-cover pointer-events-none"

@@ -50,6 +50,29 @@ const MediaDetails = ({ media }: { media: Media }) => {
     speed: 400,
     slidesToShow: 5,
     slidesToScroll: 5,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
   return (
@@ -125,11 +148,11 @@ const MediaDetails = ({ media }: { media: Media }) => {
         {selectedDetail === "DETAILS" && (
           <div>
             <h1 className="text-2xl pb-6">{media.title}</h1>
-            <div className="grid grid-cols-2">
-              <div className="pr-3">
+            <div className="grid grid-row-2 lg:grid-cols-2">
+              <div className="pr-0 pb-3 lg:pr-3 lg:pb-0 ">
                 <p className="text-xl font-normal max-w-3xl">{media.synopsis}</p>
               </div>
-              <div className="grid grid-cols-2 pl-3">
+              <div className="grid grid-cols-2 pl-0 pt-3 lg:pt-0 lg:pl-3">
                 <div>
                   <div className="pb-2">
                     <p className="font-light text-sm text-gray-300 leading-relaxed">Duration:</p>

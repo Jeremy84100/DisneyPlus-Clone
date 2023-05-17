@@ -142,7 +142,7 @@ const MediaPage: React.FC = () => {
         <Background />
       </div>
       <div className="mb-10 max-w-4xl">
-        <h1 className="mt-40 mb-4 text-7xl">{media.title}</h1>
+        <h1 className="mt-40 mb-4 text-4.5vw md:text-7xl ">{media.title}</h1>
         <div className="flex flex-col">
           <p className="text-xs font-normal my-2">
             {media.release_year} • {media.duration}m
@@ -151,7 +151,7 @@ const MediaPage: React.FC = () => {
             {media.genres.map((genre) => genre.name).join(", ")}
           </p>
         </div>
-        <div className="pt-8 flex items-center">
+        <div className="pt-8 flex items-center flex-wrap">
           <button className="h-14 rounded transition-all ease-in-out duration-200 bg-white hover:bg-neutral-400 active:bg-neutral-500 px-6 my-1 mr-3 flex items-center">
             <svg
               aria-hidden="true"

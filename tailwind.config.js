@@ -33,6 +33,7 @@ export default {
       },
       fontSize: {
         '44px': '44px',
+        '4.5vw': '10vw',
       },
       minHeight: {
         '100': 'calc(100vh - 330px)',
