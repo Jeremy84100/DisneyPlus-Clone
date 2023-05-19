@@ -3,8 +3,19 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import disneyLogo from "@/assets/images/disney-logo.svg";
+import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
-const Menu = () => {
+import { Profile } from "@/types/types";
+
+
+interface Props {
+  selectedProfile: Profile;
+  profiles: Profile[];
+  handleSelectedProfile: (profile: Profile | undefined) => void;
+}
+
+
+const Menu = ({ selectedProfile, profiles, handleSelectedProfile }: Props) => {
   const [scrolled, setScrolled] = useState(false);
 
   const MenuData = [
@@ -119,9 +130,7 @@ const Menu = () => {
           ))}
         </span>
       </Responsive>
-      <div className="menu__right">
-        <a href="#"></a>
-      </div>
+      <ProfileMenu selectedProfile={selectedProfile} profiles={profiles} handleSelectedProfile={handleSelectedProfile} />
     </div>
   );
 };

@@ -37,6 +37,12 @@ export default {
       },
       minHeight: {
         '100': 'calc(100vh - 330px)',
+        "640px": "640px",
+        '170': '170px',
+      },
+      maxHeight: {
+        '72px': '72px',
+        '100@': 'calc(100vh - 40px)',
       },
       spacing: {
         '72px': '72px',
@@ -48,11 +54,8 @@ export default {
       transitionDuration: {
         '1500': '1500ms',
       },
-      minHeight: {
-        '170': '170px',
-      },
       screens: {
-        'laptopL': '1441px',
+        'laptopL': '1440px',
 
       },
     },

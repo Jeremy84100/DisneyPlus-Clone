@@ -1,21 +1,13 @@
 import { Link } from "react-router-dom";
 
-interface Media {
-  [x: string]: any;
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
+import { Movie, TVShow } from "@/types/types";
 
 interface CardProps {
-  movie?: Media;
-  tvShow?: Media;
+  movie?: Movie;
+  tvShow?: TVShow;
 }
 
 const Card = ({ movie, tvShow }: CardProps) => {
-  
   const handleOnMouseOver = (e: React.MouseEvent<HTMLImageElement>) => {
     const sibling = e.currentTarget.nextElementSibling;
     if (sibling) {
@@ -41,7 +33,7 @@ const Card = ({ movie, tvShow }: CardProps) => {
   const mediaType = movie ? "movies" : "series";
 
   return (
-    <Link to={`/${mediaType}/${media.id}`} >
+    <Link to={`/${mediaType}/${media.id}`}>
       <div className="relative">
         <img
           src={`https://image.tmdb.org/t/p/w500/${media.backdrop_path}`}

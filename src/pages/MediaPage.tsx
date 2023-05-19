@@ -1,43 +1,36 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import MediaDetails from "./MediaDetails";
 
-interface Genre {
-  id: number;
-  name: string;
+import { Media, Genre, Profile } from "@/types/types";
+
+interface MediaPageProps {
+  selectedProfile: Profile;
+  setSelectedProfile: (profile: Profile) => void;
 }
 
-interface Video {
-  id: string;
-  key: string;
-  name: string;
-  type: string;
-}
-
-interface Media {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-  backdrop_path: string;
-  overview: string;
-  genres: Genre[];
-  release_year: string;
-  duration: number;
-  recommendations: Media[];
-  videos: Video[];
-  directors: string[];
-  release_date: string;
-  rating: number;
-  actors: string[];
-  synopsis: string;
-}
-
-const MediaPage: React.FC = () => {
+const MediaPage = ({ selectedProfile, setSelectedProfile }: MediaPageProps) => {
   const { id } = useParams<{ id: string }>();
   const [media, setMedia] = useState<Media | null>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleAddToWatchlist = () => {
+    if (media) {
+      const updatedProfile = { ...selectedProfile };
+      const existingIndex = updatedProfile.watchlist.findIndex(
+        (item) => item.id === media.id
+      );
+
+      if (existingIndex !== -1) {
+        updatedProfile.watchlist.splice(existingIndex, 1);
+      } else {
+        updatedProfile.watchlist.push(media);
+      }
+
+      setSelectedProfile(updatedProfile);
+    }
+  };
 
   const handleScroll = () => {
     const position = window.scrollY;
@@ -130,6 +123,16 @@ const MediaPage: React.FC = () => {
     return null;
   }
 
+  const handleTrailerClick = () => {
+    if (media.videos && media.videos.length > 0) {
+      const videoKey = media.videos[0].key;
+
+      const videoUrl = `https://www.youtube.com/watch?v=${videoKey}`;
+
+      window.open(videoUrl, "_blank");
+    }
+  };
+
   return (
     <article className="flex flex-col pb-14">
       <div
@@ -167,12 +170,20 @@ const MediaPage: React.FC = () => {
             <p className="tracking-wider ml-3 text-black">PLAY</p>
           </button>
 
-          <button className="my-1 py-4 mx-3 px-6 tracking-wide rounded border border-white bg-black/60 transition-all ease-in-out duration-200 hover:bg-white hover:text-black">
+          <button
+            className="my-1 py-4 mx-3 px-6 tracking-wide rounded border border-white bg-black/60 transition-all ease-in-out duration-200 hover:bg-white hover:text-black"
+            onClick={handleTrailerClick}>
             TRAILER
           </button>
 
-          <Button className="flex items-center justify-center h-11 w-11 ml-2 mr-4 rounded-full transition-all ease-out duration-400 bg-black border-2 border-white hover:bg-white">
-            <span className="text-white text-2xl">+</span>
+          <Button
+            className="flex items-center justify-center h-11 w-11 ml-2 mr-4 rounded-full transition-all ease-out duration-400 bg-black border-2 border-white hover:bg-white"
+            onClick={handleAddToWatchlist}>
+            {selectedProfile.watchlist.some((item) => item.id === media.id) ? (
+              <span className="text-sky-500 text-2xl">✓</span>
+            ) : (
+              <span className="text-white text-2xl">+</span>
+            )}
           </Button>
 
           <div className="flex flex-col items-center">

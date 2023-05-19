@@ -1,41 +1,12 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Card from "@/components/layouts/MainLayout/Components/Card";
-import CardExtras from "@/components/layouts/MainLayout/CardExtras";
+import CardExtras from "@/components/layouts/MainLayout/Components/CardExtras";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-interface Video {
-  id: string;
-  key: string;
-  name: string;
-  type: string;
-}
-
-interface Genre {
-  id: number;
-  name: string;
-}
-
-interface Media {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-  backdrop_path: string;
-  overview: string;
-  release_year: string;
-  duration: number;
-  recommendations: Media[];
-  videos: Video[];
-  directors: string[];
-  release_date: string;
-  genres: Genre[];
-  rating: number;
-  actors: string[];
-  synopsis: string;
-}
+import { Media } from "@/types/types";
 
 const MediaDetails = ({ media }: { media: Media }) => {
   const [selectedDetail, setSelectedDetail] = useState("SUGGESTED");

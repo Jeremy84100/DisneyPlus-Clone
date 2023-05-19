@@ -1,3 +1,8 @@
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Movie, TVShow, Genre, Image, Profile } from "@/types/types";
+
+import HeaderProfile from "./Components/HeaderProfile";
 import Header from "./Components/Header/Header";
 import Background from "./Components/Background";
 
@@ -8,38 +13,59 @@ import Originals from "@/pages/Originals";
 import Movies from "@/pages/Movies";
 import Series from "@/pages/Series";
 import MediaPage from "@/pages/MediaPage";
+import NotFound from "@/pages/NotFound";
 
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import BrandPage from "@/pages/BrandPage";
+import SelectProfile from "@/pages/SelectProfile";
+import SelectAvatar from "@/pages/SelectAvatar";
+import AddProfile from "@/pages/AddProfile";
 
 import Footer from "./Components/Footer";
-import BrandPage from "@/pages/BrandPage";
-
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface TVShow {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface Genre {
-  id: number;
-  name: string;
-  movies: Movie[];
-  tvShows: TVShow[];
-}
 
 const MainLayout = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [tvShows, setTVShows] = useState<TVShow[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
+  const [profiles, setProfiles] = useState<Profile[]>([]);
+  const [profileName, setProfileName] = useState<string>("");
+  const [selectedImage, setSelectedImage] = useState<Image>({
+    id: 16,
+    image: "src/assets/images/profile/mickey-mouse/mickey-mouse.png",
+    alt: "Mickey Mouse",
+    category: "Mickey Mouse",
+  });
+  const [selectedProfile, setSelectedProfile] = useState<Profile>({
+    id: 1,
+    image: selectedImage,
+    name: "",
+    watchlist: [],
+  });
+
+  const handleSelectedProfile = (profile: Profile | undefined) => {
+    if (profile) {
+      setSelectedProfile(profile);
+    }
+  };
+
+  const handleProfileName = (e: any) => {
+    setProfileName(e.target.value);
+  };
+
+  const handleSelectImage = (image: Image) => {
+    setSelectedImage(image);
+  };
+
+  const handleAddProfile = () => {
+    setProfiles((prevProfiles) => [
+      ...prevProfiles,
+      {
+        image: selectedImage,
+        name: profileName,
+        id: prevProfiles.length + 1,
+        watchlist: [],
+      },
+    ]);
+  };
 
   const fetchMedia = async (mediaType: string, withCompanies: number) => {
     const targetNumResults = 10;
@@ -149,17 +175,45 @@ const MainLayout = () => {
   const showBackground =
     location.pathname === "/" ||
     location.pathname === "/search" ||
-    location.pathname === "/watchlist";
+    location.pathname === "/watchlist" ||
+    location.pathname === "/select-avatar";
+
+  const showHeader =
+    location.pathname === "/select-profile" ||
+    location.pathname === "/select-avatar" ||
+    location.pathname === "/add-profile" ||
+    location.pathname === "/not-found";
+
+  const showFooter =
+    location.pathname === "/select-profile" ||
+    location.pathname === "/select-avatar" ||
+    location.pathname === "/add-profile" ||
+    location.pathname === "/not-found";
+
+  const showHeaderProfile =
+    location.pathname === "/select-profile" ||
+    location.pathname === "/select-avatar" ||
+    location.pathname === "/add-profile";
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden pt-72px">
-      <Header />
+      {showHeaderProfile && <HeaderProfile />}
+      {!showHeader && (
+        <Header
+          selectedProfile={selectedProfile}
+          profiles={profiles}
+          handleSelectedProfile={handleSelectedProfile}
+        />
+      )}
       {showBackground && <Background />}
       <main className="px-5%">
         <Routes>
           <Route path="/" element={<Home genres={genres} />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/watchlist" element={<Watchlist />} />
+          <Route
+            path="/watchlist"
+            element={<Watchlist selectedProfile={selectedProfile} />}
+          />
           <Route path="/originals" element={<Originals genres={genres} />} />
           <Route
             path="/movies"
@@ -170,11 +224,54 @@ const MainLayout = () => {
             element={<Series tvShows={tvShows} genres={genres} />}
           />
           <Route path="/brand/:brand" element={<BrandPage genres={genres} />} />
-          <Route path="/movies/:id" element={<MediaPage />} />
-          <Route path="/series/:id" element={<MediaPage />} />
+          <Route
+            path="/movies/:id"
+            element={
+              <MediaPage
+                selectedProfile={selectedProfile}
+                setSelectedProfile={setSelectedProfile}
+              />
+            }
+          />
+          <Route
+            path="/series/:id"
+            element={
+              <MediaPage
+                selectedProfile={selectedProfile}
+                setSelectedProfile={setSelectedProfile}
+              />
+            }
+          />
+
+          <Route
+            path="/select-profile"
+            element={
+              <SelectProfile
+                profiles={profiles}
+                handleSelectedProfile={handleSelectedProfile}
+              />
+            }
+          />
+          <Route
+            path="/select-avatar"
+            element={<SelectAvatar handleSelectImage={handleSelectImage} />}
+          />
+          <Route
+            path="/add-profile"
+            element={
+              <AddProfile
+                selectedImage={selectedImage}
+                profileName={profileName}
+                handleProfileName={handleProfileName}
+                handleAddProfile={handleAddProfile}
+              />
+            }
+          />
+          <Route path="*" element={<Navigate to="/not-found" />} />
+          <Route path="/not-found" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      {!showFooter && <Footer />}
     </div>
   );
 };

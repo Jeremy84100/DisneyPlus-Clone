@@ -4,22 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface Genre {
-  id: number;
-  name: string;
-  movies: Movie[];
-}
-
+import { Movie, Genre } from "@/types/types";
 
 const Category = ({ genres }: { genres: any }) => {
- 
   const settings = {
     dots: false,
     infinite: false,
@@ -57,9 +44,10 @@ const Category = ({ genres }: { genres: any }) => {
         <div key={genre.id}>
           <h2 className="pb-2.5 text-lg font-medium">{genre.name}</h2>
           <Carousel {...settings} className="mb-6">
-            {genre.movies.map((movie: Movie) => (
-              <Card key={movie.id} movie={movie} />
-            ))}
+            {genre.movies &&
+              genre.movies.map((movie: Movie) => (
+                <Card key={movie.id} movie={movie} />
+              ))}
           </Carousel>
         </div>
       ))}

@@ -1,0 +1,232 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "image": "src/assets/images/profile/disney/dug.png",
+            "alt": "Dug",
+            "category": "Disney"
+        },
+        {
+            "id": 2,
+            "image": "src/assets/images/profile/disney/joe.png",
+            "alt": "Joe",
+            "category": "Disney"
+        },
+        {
+            "id": 3,
+            "image": "src/assets/images/profile/disney/luca.png",
+            "alt": "Luca",
+            "category": "Disney"
+        },
+        {
+            "id": 4,
+            "image": "src/assets/images/profile/disney/mater.png",
+            "alt": "Mater",
+            "category": "Disney"
+        },
+        {
+            "id": 5,
+            "image": "src/assets/images/profile/disney/mcqueen.png",
+            "alt": "Mcqueen",
+            "category": "Disney"
+        },
+        {
+            "id": 6,
+            "image": "src/assets/images/profile/disney/meilin.png",
+            "alt": "Meilin",
+            "category": "Disney"
+        },
+        {
+            "id": 7,
+            "image": "src/assets/images/profile/disney/buzz.png",
+            "alt": "Buzz",
+            "category": "Disney"
+        },
+        {
+            "id": 8,
+            "image": "src/assets/images/profile/star-wars/baby-yoga.png",
+            "alt": "Baby Yoga",
+            "category": "Star Wars"
+        },
+        {
+            "id": 9,
+            "image": "src/assets/images/profile/marvel/hulk.png",
+            "alt": "Hulk",
+            "category": "Marvel"
+        },
+        {
+            "id": 10,
+            "image": "src/assets/images/profile/marvel/iron-man.png",
+            "alt": "Iron Man",
+            "category": "Marvel"
+        },
+        {
+            "id": 11,
+            "image": "src/assets/images/profile/marvel/loki.png",
+            "alt": "Loki",
+            "category": "Marvel"
+        },
+        {
+            "id": 12,
+            "image": "src/assets/images/profile/marvel/spider-man.png",
+            "alt": "Spider-Man",
+            "category": "Marvel"
+        },
+        {
+            "id": 13,
+            "image": "src/assets/images/profile/marvel/strange.png",
+            "alt": "Doctor Strange",
+            "category": "Marvel"
+        },
+        {
+            "id": 14,
+            "image": "src/assets/images/profile/marvel/thanos.png",
+            "alt": "Thanos",
+            "category": "Marvel"
+        },
+        {
+            "id": 15,
+            "image": "src/assets/images/profile/marvel/thor.png",
+            "alt": "Thor",
+            "category": "Marvel"
+        },
+        {
+            "id": 16,
+            "image": "src/assets/images/profile/mickey-mouse/mickey-mouse.png",
+            "alt": "Mickey Mouse",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 17,
+            "image": "src/assets/images/profile/mickey-mouse/minnie.png",
+            "alt": "Minnie",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 18,
+            "image": "src/assets/images/profile/mickey-mouse/daisy.png",
+            "alt": "Daisy",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 19,
+            "image": "src/assets/images/profile/mickey-mouse/donald.png",
+            "alt": "Donald",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 20,
+            "image": "src/assets/images/profile/mickey-mouse/goofy.png",
+            "alt": "Goofy",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 21,
+            "image": "src/assets/images/profile/mickey-mouse/pluto.png",
+            "alt": "Pluto",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 22,
+            "image": "src/assets/images/profile/mickey-mouse/scrooge.png",
+            "alt": "Scrooge",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 23,
+            "image": "src/assets/images/profile/mickey-mouse/dale.png",
+            "alt": "Dale",
+            "category": "Mickey Mouse"
+        },
+        {
+            "id": 24,
+            "image": "src/assets/images/profile/national-geographic/dolphin.png",
+            "alt": "Dolphin",
+            "category": "National Geographic"
+            },
+        {
+            "id": 25,
+            "image": "src/assets/images/profile/national-geographic/elephant.png",
+            "alt": "Elephant",
+            "category": "National Geographic"
+        },
+        {
+            "id": 26,
+            "image": "src/assets/images/profile/national-geographic/gibbon.png",
+            "alt": "Gibbon",
+            "category": "National Geographic"
+        },
+        {
+            "id": 27,
+            "image": "src/assets/images/profile/national-geographic/jaguar.png",
+            "alt": "Jaguar",
+            "category": "National Geographic"
+        },
+        {
+            "id": 28,
+            "image": "src/assets/images/profile/national-geographic/panda.png",
+            "alt": "Panda",
+            "category": "National Geographic"
+        },
+        {
+            "id": 29,
+            "image": "src/assets/images/profile/national-geographic/penguin.png",
+            "alt": "Penguin",
+            "category": "National Geographic"
+        },
+        {
+            "id": 30,
+            "image": "src/assets/images/profile/national-geographic/shark.png",
+            "alt": "Shark",
+            "category": "National Geographic"
+        },
+        {
+            "id": 31,
+            "image": "src/assets/images/profile/star-wars/booba-fett.png",
+            "alt": "Booba Fett",
+            "category": "Star Wars"
+        },
+        {
+            "id": 32,
+            "image": "src/assets/images/profile/star-wars/c-3po.png",
+            "alt": "C-3PO",
+            "category": "Star Wars"
+        },
+        {
+            "id": 33,
+            "image": "src/assets/images/profile/star-wars/dark-vador.png",
+            "alt": "Dark Vador",
+            "category": "Star Wars"
+        },
+        {
+            "id": 34,
+            "image": "src/assets/images/profile/star-wars/mandalorian.png",
+            "alt": "Mandalorian",
+            "category": "Star Wars"
+        },
+        {
+            "id": 35,
+            "image": "src/assets/images/profile/star-wars/obi-wan.png",
+            "alt": "Obi-Wan",
+            "category": "Star Wars"
+        },
+        {
+            "id": 36,
+            "image": "src/assets/images/profile/star-wars/r2-d2.png",
+            "alt": "R2-D2",
+            "category": "Star Wars"
+        },
+        {
+            "id": 37,
+            "image": "src/assets/images/profile/star-wars/stormtroopers.png",
+            "alt": "Stormtroopers",
+            "category": "Star Wars"
+        },
+        {
+            "id": 38,
+            "image": "src/assets/images/profile/star-wars/yoda.png",
+            "alt": "Yoda",
+            "category": "Star Wars"
+        }
+    ]
+}

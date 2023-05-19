@@ -1,25 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface TVShow {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface Genre {
-  id: number;
-  name: string;
-  movies: Movie[];
-  tvShows: TVShow[];
-}
+import { Movie, TVShow, Genre } from "@/types/types";
 
 interface MovieGenre extends Genre {
   movies: Movie[];
@@ -66,11 +47,14 @@ const Filters = ({
     toggleDivVisibility();
   };
 
-  const handleGenreClick = (genre: MovieGenre | TVShowGenre) => {
-    handleSelectedGenre(genre);
+  const handleGenreClick = (genre: MovieGenre | TVShowGenre | Genre) => {
+    if ("movies" in genre || "tvShows" in genre) {
+      handleSelectedGenre(genre as MovieGenre | TVShowGenre);
+    } else {
+      handleSelectedGenre(genre);
+    }
     setDivVisible(false);
   };
-
   return (
     <div>
       <div
@@ -111,7 +95,7 @@ const Filters = ({
                   className={`text-stone-300 hover:text-white py-1 transition-all duration-200 pl-3 pr-5 font-light text-sm ${
                     genre === selectedGenre ? "font-semibold" : "font-medium"
                   }`}>
-                  {genre.name}
+                  {genre.name.toUpperCase()}
                 </h1>
               </div>
             );

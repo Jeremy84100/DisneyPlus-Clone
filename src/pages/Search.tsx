@@ -2,12 +2,7 @@ import { useState, useEffect } from "react";
 import SearchBar from "@/components/layouts/MainLayout/Components/SearchBar";
 import Card from "@/components/layouts/MainLayout/Components/Card";
 
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
+import { Movie } from "@/types/types";
 
 const Search = () => {
   const [movies, setMovies] = useState([]);

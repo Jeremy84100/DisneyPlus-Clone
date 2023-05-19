@@ -2,30 +2,11 @@ import Card from "@/components/layouts/MainLayout/Components/Card";
 import Filters from "@/components/layouts/MainLayout/Components/Filters";
 import { useState } from "react";
 
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface TVShow {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface Genre {
-  id: number;
-  name: string;
-  movies: Movie[];
-  tvShows: TVShow[];
-}
+import { Movie, Genre } from "@/types/types";
 
 const Movies = ({ genres, movies }: { genres: Genre[]; movies: Movie[] }) => {
   const [selectedGenre, setSelectedGenre] = useState<Genre>(
-    genres.find((genre) => genre.movies.length > 0) || genres[0]
+    genres.find((genre) => genre.movies && genre.movies.length > 0) || genres[0]
   );
 
   const handleSelectedGenre = (genre: Genre) => {
@@ -42,7 +23,7 @@ const Movies = ({ genres, movies }: { genres: Genre[]; movies: Movie[] }) => {
           selectedGenre={selectedGenre}
         />
       </div>
-      <div className="mt-28 grid-cols-2 laptopL:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 gap-5">
+      <div className="mt-28 grid grid-cols-2 laptopL:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 gap-5">
         {selectedGenre && selectedGenre.movies
           ? selectedGenre.movies
               .slice(0, 35)

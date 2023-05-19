@@ -2,26 +2,7 @@ import Card from "@/components/layouts/MainLayout/Components/Card";
 import Filters from "@/components/layouts/MainLayout/Components/Filters";
 import { useState } from "react";
 
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface TVShow {
-  id: number;
-  title: string;
-  poster_path: string;
-  genre_ids: number[];
-}
-
-interface Genre {
-  id: number;
-  name: string;
-  movies: Movie[];
-  tvShows: TVShow[];
-}
+import { TVShow, Genre } from "@/types/types";
 
 const Series = ({
   genres,

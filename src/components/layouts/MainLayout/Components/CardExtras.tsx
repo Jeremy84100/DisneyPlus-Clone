@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-interface Video {
-  id: string;
-  key: string;
-  name: string;
-  type: string;
-}
+import { Video } from "@/types/types";
 
 const CardExtras = ({ video }: { video: Video }) => {
   const [thumbnailUrl, setThumbnailUrl] = useState<string>('');
