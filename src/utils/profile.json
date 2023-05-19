@@ -2,19 +2,19 @@
     "images": [
         {
             "id": 1,
-            "image": "public/images/profiles/dug.png",
+            "image": "assets/images/profiles/dug.png",
             "alt": "Dug",
             "category": "Disney"
         },
         {
             "id": 2,
-            "image": "public/images/profiles/joe.png",
+            "image": "assets/images/profiles/joe.png",
             "alt": "Joe",
             "category": "Disney"
         },
         {
             "id": 3,
-            "image": "public/images/profiles/luca.png",
+            "image": "assets/images/profiles/luca.png",
             "alt": "Luca",
             "category": "Disney"
         },
