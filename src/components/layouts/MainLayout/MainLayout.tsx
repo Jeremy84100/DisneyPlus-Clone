@@ -30,7 +30,7 @@ const MainLayout = () => {
   const [profileName, setProfileName] = useState<string>("");
   const [selectedImage, setSelectedImage] = useState<Image>({
     id: 16,
-    image: "public/images/profile/mickey-mouse/mickey-mouse.png",
+    image: "src/images/profile/mickey-mouse.png",
     alt: "Mickey Mouse",
     category: "Mickey Mouse",
   });
