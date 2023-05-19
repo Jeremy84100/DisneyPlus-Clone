@@ -2,7 +2,7 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import jsonData from "@/../utils/profile.json";
+import jsonData from "@/utils/profile.json";
 import CardProfile from "@/components/layouts/MainLayout/Components/CardProfile";
 import { useNavigate } from "react-router-dom";
 
