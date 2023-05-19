@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { Profile } from "@/types/types";
 
+
 interface SelectProfilesProps {
   profiles: Profile[];
   handleSelectedProfile: (profile: Profile) => void;
