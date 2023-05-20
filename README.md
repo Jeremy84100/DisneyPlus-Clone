@@ -28,7 +28,7 @@ This is a clone of the Disney+ website created using React, Vite, TypeScript, Ta
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/your-username/DisneyPlus-Clone.git`
-2. Install the dependencies using the following command: `npm install``
+2. Install the dependencies using the following command: `npm install`
 3. Start the application using the following command: `npm start`
 4. Open your browser and go to the following URL: `http://localhost:3000`
 
