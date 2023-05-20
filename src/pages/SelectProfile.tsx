@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import { Profile } from "@/types/types";
 
-
 interface SelectProfilesProps {
   profiles: Profile[];
   handleSelectedProfile: (profile: Profile) => void;
@@ -52,7 +51,9 @@ const SelectProfiles = ({
                 onClick={() => handleSelectedProfile(p)}>
                 <CardProfile image={p.image} />
               </Link>
-              <h3 className="text-2xl mt-6">{p.name}</h3>
+              <h3 className="text-2xl mt-6">
+                {p.name.length > 10 ? `${p.name.substring(0, 10)}...` : p.name}
+              </h3>
             </div>
           ))}
           <div className="m-5 flex flex-col items-center">

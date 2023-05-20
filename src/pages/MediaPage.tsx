@@ -136,11 +136,12 @@ const MediaPage = ({ selectedProfile, setSelectedProfile }: MediaPageProps) => {
   return (
     <article className="flex flex-col pb-14">
       <div
-        className="fixed opacity-0 -z-10 left-0 right-0 top-0 w-full transition-opacity"
+        className="fixed opacity-0 -z-10 left-0 right-0 top-0 w-screen transition-opacity"
         style={{ opacity: rooOpacity }}>
         <img
           src={`https://image.tmdb.org/t/p/original/${media.backdrop_path}`}
           alt={media.title}
+          className="w-screen"
         />
         <Background />
       </div>

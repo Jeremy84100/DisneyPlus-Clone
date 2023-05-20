@@ -6,14 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import lionKingBackground from "@/assets/images/slider-header/the-lion-king/the-lion-king-background.jpg";
 import lionKingLogo from "@/assets/images/slider-header/the-lion-king/the-lion-king-logo.png";
-import theSimpsonsBackground from "@/assets/images/slider-header/the-simpsons/the-simpsons-background.jpg";
-import theSimpsonsLogo from "@/assets/images/slider-header/the-simpsons/the-simpsons-logo.png";
+import theRescueBackground from "@/assets/images/slider-header/the-rescue/the-rescue-background.jpg";
+import theRescueLogo from "@/assets/images/slider-header/the-rescue/the-rescue-logo.png";
 import spidermanBackground from "@/assets/images/slider-header/spiderman/spiderman-background.jpg";
 import spidermanLogo from "@/assets/images/slider-header/spiderman/spiderman-logo.png";
 import peterPanBackground from "@/assets/images/slider-header/peter-pan/peter-pan-background.jpg";
 import peterPanLogo from "@/assets/images/slider-header/peter-pan/peter-pan-logo.png";
-import mickeyMouse from "@/assets/images/slider-header/mickey-mouse/mickey-mouse-background.jpg";
-import mickeyMouseLogo from "@/assets/images/slider-header/mickey-mouse/mickey-mouse-logo.png";
+import westSideHistoryBackground from "@/assets/images/slider-header/west-side-history/west-side-history-background.jpg";
+import westSideHistoryLogo from "@/assets/images/slider-header/west-side-history/west-side-history-logo.png";
 
 const SliderHeader = () => {
   const SliderHeaderData = [
@@ -24,10 +24,10 @@ const SliderHeader = () => {
       path: "/movies/420818"
     },
     {
-      background: theSimpsonsBackground,
-      logo: theSimpsonsLogo,
-      title: "The Simpsons",
-      path: "/series/456"
+      background: theRescueBackground,
+      logo: theRescueLogo,
+      title: "The Rescue",
+      path: "/movies/680058"
     },
     {
       background: spidermanBackground,
@@ -42,10 +42,10 @@ const SliderHeader = () => {
       path: "/movies/420808"
     },
     {
-      background: mickeyMouse,
-      logo: mickeyMouseLogo,
-      title: "Mickey Mouse",
-      path: "/series/127633"
+      background: westSideHistoryBackground,
+      logo: westSideHistoryLogo,
+      title: "West Side Story",
+      path: "/movies/511809"
     },
   ];
 
