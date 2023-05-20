@@ -2,7 +2,13 @@
 
 This is a clone of the Disney+ website created using React, Vite, TypeScript, Tailwind CSS, React Router DOM, and other technologies.
 
-![DisneyPlus-Clone](./screenshot.png)
+![DisneyPlus-Clone](./public/images/profiles.png)
+
+![DisneyPlus-Clone](./public/images/main.png)
+
+![DisneyPlus-Clone](./public/images/brand.png)
+
+![DisneyPlus-Clone](./public/images/media.png)
 
 ## Features
 
