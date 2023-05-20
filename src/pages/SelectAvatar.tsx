@@ -6,13 +6,7 @@ import jsonData from "@/utils/profile.json";
 import CardProfile from "@/components/layouts/MainLayout/Components/CardProfile";
 import { useNavigate } from "react-router-dom";
 
-interface Image {
-  id: number;
-  image: string;
-  alt: string;
-  category: string;
-}
-
+import { Image } from "@/types/types";
 interface Props {
   handleSelectImage: (image: Image) => void;
 }

@@ -26,7 +26,7 @@
         },
         {
             "id": 5,
-            "image": "/src/assets/images/profiles/mcqueen.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7AF80638BF5375882B663D6B7613A431D7E5513ECE97A6BB6512F6FD22EC69B4/scale?width=600&aspectRatio=1.00&format=png",
             "alt": "Mcqueen",
             "category": "Disney"
         },
@@ -200,7 +200,7 @@
         },
         {
             "id": 34,
-            "image": "/src/assets/images/profiles/mandalorian.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/860C4A04F49C9678C54EDCE3DBC95CF7E8C93116B69EC81CF88871E1D60A7F5A/scale?width=600&aspectRatio=1.00&format=png",
             "alt": "Mandalorian",
             "category": "Star Wars"
         },
