@@ -2,25 +2,25 @@
     "images": [
         {
             "id": 1,
-            "image": "/src/assets/images/profiles/dug.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0B1CBFF3F397FF5A8CA180BE6404FFBBF42C5C8408176330CC8AAF43FAB40A0C/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Dug",
             "category": "Disney"
         },
         {
             "id": 2,
-            "image": "/src/assets/images/profiles/joe.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6D599ED6592198B026E56700EA04CB8D583C5B934F08C5432B1877554E89D527/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Joe",
             "category": "Disney"
         },
         {
             "id": 3,
-            "image": "/src/assets/images/profiles/luca.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CD05FF92A733E897568A4DF2C05D279892E1F9D19082F3BB55DE277E5A4BDC0E/scale?width=600&aspectRatio=1.00&format=png",
             "alt": "Luca",
             "category": "Disney"
         },
         {
             "id": 4,
-            "image": "/src/assets/images/profiles/mater.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F73277B06EE997988A5DD3356F145DB4A0D9C82A7656796DB20B93B2D0DC7C79/scale?width=600&aspectRatio=1.00&format=png",
             "alt": "Mater",
             "category": "Disney"
         },
@@ -32,169 +32,169 @@
         },
         {
             "id": 6,
-            "image": "/src/assets/images/profiles/meilin.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2E28863C4EB5BF06A03CC7B4D56D4FD53C652CA6F03DD62EEC6CB0D142F28C96/scale?width=600&aspectRatio=1.00&format=png",
             "alt": "Meilin",
             "category": "Disney"
         },
         {
             "id": 7,
-            "image": "/src/assets/images/profiles/buzz.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6B92C035496B139AF3E87E810193D474B9829A392D2C24F4F744AFA3580676F8/scale?width=600&aspectRatio=1.00&format=png",
             "alt": "Buzz",
             "category": "Disney"
         },
         {
             "id": 8,
-            "image": "/src/assets/images/profiles/baby-yoga.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/263F418F2C47943D98B2877ECAD174927FBBD359C4AFB45BE0C6A22AD589D22E/scale?width=280&aspectRatio=1.00&format=png",
             "alt": "Baby Yoga",
             "category": "Star Wars"
         },
         {
             "id": 9,
-            "image": "/src/assets/images/profiles/hulk.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9CA2629B7FC11ECF1D361F7351841C67E7E8C06D1FE53512E69EEE63A1D63FEB/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Hulk",
             "category": "Marvel"
         },
         {
             "id": 10,
-            "image": "/src/assets/images/profiles/iron-man.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/52A0BB56BCB3FE9A976B4F16FEE3E64500F9A45DC0966B8CF85E42FACA9B4400/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Iron Man",
             "category": "Marvel"
         },
         {
             "id": 11,
-            "image": "/src/assets/images/profiles/loki.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4105F4FE723FDB4403CB0B4A679AE2945861849935BA40E296F5D10EE65B2615/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Loki",
             "category": "Marvel"
         },
         {
             "id": 12,
-            "image": "/src/assets/images/profiles/spider-man.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FE49954B252C628EC809C68832E9137D5926C2085D58A6510F8BBA12933F7B7E/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Spider-Man",
             "category": "Marvel"
         },
         {
             "id": 13,
-            "image": "/src/assets/images/profiles/strange.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/ECA649992C3ECF9D41FEF7629CAA0E7561824A2F5811140849FCB0C27F8A5266/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Doctor Strange",
             "category": "Marvel"
         },
         {
             "id": 14,
-            "image": "/src/assets/images/profiles/thanos.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9FA1C7C4168D777DD75DD4035DBAB94CD7FDA698A74A83D276BE6845A0652E6A/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Thanos",
             "category": "Marvel"
         },
         {
             "id": 15,
-            "image": "/src/assets/images/profiles/thor.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/96F7D22409780B0EFDC1F76E7FA664D2A965879FD8A7D806EBF59DE172CADC20/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Thor",
             "category": "Marvel"
         },
         {
             "id": 16,
-            "image": "/src/assets/images/profiles/mickey-mouse.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/BD2FA0F3965617FC515E3CEBD3AD51C00CCFFBF98F96448EFE46B82867FCE542/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Mickey Mouse",
             "category": "Mickey Mouse"
         },
         {
             "id": 17,
-            "image": "/src/assets/images/profiles/minnie.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9B9BD428EFE9C3EA7DE723534401B0BD8BD2743647C39839F33F11D1DE0AD2A5/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Minnie",
             "category": "Mickey Mouse"
         },
         {
             "id": 18,
-            "image": "/src/assets/images/profiles/daisy.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/91052D83E959D4F7E129F1C289E0E4EA7D70AB677BD62F6721D1AE023510CD99/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Daisy",
             "category": "Mickey Mouse"
         },
         {
             "id": 19,
-            "image": "/src/assets/images/profiles/donald.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/58A1E29AEE806CE56D4FB7E902435DD6303E562F23A7F8944DF37F51FF4BC020/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Donald",
             "category": "Mickey Mouse"
         },
         {
             "id": 20,
-            "image": "/src/assets/images/profiles/goofy.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/27D52ADA71F1CE14546050835E2FA8DD6FF4EA2F9331C27B451157491D247652/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Goofy",
             "category": "Mickey Mouse"
         },
         {
             "id": 21,
-            "image": "/src/assets/images/profiles/pluto.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/A15B054947AF1F729037EB27FB8C4C99FD666A2057EABD8BB4DC393F58D4B9A1/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Pluto",
             "category": "Mickey Mouse"
         },
         {
             "id": 22,
-            "image": "/src/assets/images/profiles/scrooge.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/AAF06CAA49AB431AD24F890DD3144DEAD0FAED97A093407802A7C5EB8E22F560/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Scrooge",
             "category": "Mickey Mouse"
         },
         {
             "id": 23,
-            "image": "/src/assets/images/profiles/dale.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B17536DC125E806463842DBFE1EFF653918841D9924FB1F24F3616606BB9EC74/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Dale",
             "category": "Mickey Mouse"
         },
         {
             "id": 24,
-            "image": "/src/assets/images/profiles/dolphin.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/55BBC6AA3F8D572BD2BB770AA72A65917B36EAD77E4A1B44F13BAD4527DAFEC5/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Dolphin",
             "category": "National Geographic"
             },
         {
             "id": 25,
-            "image": "/src/assets/images/profiles/elephant.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C831B541E99759346E319EF8451299CE6F1C2198E59432A84DA4431927944EB0/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Elephant",
             "category": "National Geographic"
         },
         {
             "id": 26,
-            "image": "/src/assets/images/profiles/gibbon.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2EE54BD74690802537F3FEF5E03924EA1CA432ED4705D67D5EE9511579B79637/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Gibbon",
             "category": "National Geographic"
         },
         {
             "id": 27,
-            "image": "/src/assets/images/profiles/jaguar.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4BADFACBEC2EFFFA1A808DF5E81B4C89D7D7E597F9B756DF3631F8B63C702EA5/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Jaguar",
             "category": "National Geographic"
         },
         {
             "id": 28,
-            "image": "/src/assets/images/profiles/panda.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E86A0B41FAD9D1E71117EA587A8A3CCE2F90CAEE497C4D589C8D72D9D9EB440A/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Panda",
             "category": "National Geographic"
         },
         {
             "id": 29,
-            "image": "/src/assets/images/profiles/penguin.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4E55CCF235EA8434E6E22B7B576CEA06EEB03BE2321FF9F1AFA0AF12CA6B1DEB/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Penguin",
             "category": "National Geographic"
         },
         {
             "id": 30,
-            "image": "/src/assets/images/profiles/shark.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/40536FC9AFF2E88B135C282407C4E5A9F62EE111AC6ACD6B7EA9D85CC501C5F4/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Shark",
             "category": "National Geographic"
         },
         {
             "id": 31,
-            "image": "/src/assets/images/profiles/booba-fett.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FFB352DA32802248F770EA4539CD2DD361A0E2D3A347045126494B7A624F8F9C/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Booba Fett",
             "category": "Star Wars"
         },
         {
             "id": 32,
-            "image": "/src/assets/images/profiles/c-3po.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/675155F296F8A6954D728A795655C8F055792FB5A63F891C3A9343158DA68325/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "C-3PO",
             "category": "Star Wars"
         },
         {
             "id": 33,
-            "image": "/src/assets/images/profiles/dark-vador.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B88CBEAECC3DA517C6144BC7EA1A365C8817E0D8857CFFBB950C3F8B5FEC26A4/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Dark Vador",
             "category": "Star Wars"
         },
@@ -206,25 +206,25 @@
         },
         {
             "id": 35,
-            "image": "/src/assets/images/profiles/obi-wan.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/3F0A1D4B5D2C81F7D47E808C36B420E5B061AB08D5769E3A9E8E34BCD37658F6/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Obi-Wan",
             "category": "Star Wars"
         },
         {
             "id": 36,
-            "image": "/src/assets/images/profiles/r2-d2.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/85A5FDC77A3D10A822D9FBB4F3D023C4C27A62D010680BE87F8E610741A9075B/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "R2-D2",
             "category": "Star Wars"
         },
         {
             "id": 37,
-            "image": "/src/assets/images/profiles/stormtroopers.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/414E1F31375B22A9244F08C52EF0AE533B05FCFD51A4F1CDB4BA7B72198AE2CB/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Stormtroopers",
             "category": "Star Wars"
         },
         {
             "id": 38,
-            "image": "/src/assets/images/profiles/yoda.png",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/70D1C2E35B62D55C4C917AF30957AF9BE8D60FC2089B90C131B275E86EFD0553/scale?width=300&aspectRatio=1.00&format=png",
             "alt": "Yoda",
             "category": "Star Wars"
         }

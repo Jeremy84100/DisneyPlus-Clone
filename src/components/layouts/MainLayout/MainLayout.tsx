@@ -1,4 +1,9 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Movie, TVShow, Genre, Image, Profile } from "@/types/types";
 
@@ -30,7 +35,8 @@ const MainLayout = () => {
   const [profileName, setProfileName] = useState<string>("");
   const [selectedImage, setSelectedImage] = useState<Image>({
     id: 16,
-    image: "src/images/profile/mickey-mouse.png",
+    image:
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/BD2FA0F3965617FC515E3CEBD3AD51C00CCFFBF98F96448EFE46B82867FCE542/scale?width=300&aspectRatio=1.00&format=png",
     alt: "Mickey Mouse",
     category: "Mickey Mouse",
   });
@@ -195,6 +201,7 @@ const MainLayout = () => {
     location.pathname === "/select-avatar" ||
     location.pathname === "/add-profile";
 
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden pt-72px">
       {showHeaderProfile && <HeaderProfile />}
@@ -208,41 +215,48 @@ const MainLayout = () => {
       {showBackground && <Background />}
       <main className="px-5%">
         <Routes>
-          <Route path="/" element={<Home genres={genres} />} />
-          <Route path="/search" element={<Search />} />
-          <Route
-            path="/watchlist"
-            element={<Watchlist selectedProfile={selectedProfile} />}
-          />
-          <Route path="/originals" element={<Originals genres={genres} />} />
-          <Route
-            path="/movies"
-            element={<Movies movies={movies} genres={genres} />}
-          />
-          <Route
-            path="/series"
-            element={<Series tvShows={tvShows} genres={genres} />}
-          />
-          <Route path="/brand/:brand" element={<BrandPage genres={genres} />} />
-          <Route
-            path="/movies/:id"
-            element={
-              <MediaPage
-                selectedProfile={selectedProfile}
-                setSelectedProfile={setSelectedProfile}
+          {profiles.length !== 0 && (
+            <>
+              <Route path="/" element={<Home genres={genres} />} />
+              <Route path="/search" element={<Search />} />
+              <Route
+                path="/watchlist"
+                element={<Watchlist selectedProfile={selectedProfile} />}
               />
-            }
-          />
-          <Route
-            path="/series/:id"
-            element={
-              <MediaPage
-                selectedProfile={selectedProfile}
-                setSelectedProfile={setSelectedProfile}
+              <Route path="/originals" element={<Originals genres={genres} />} />
+              <Route
+                path="/movies"
+                element={<Movies movies={movies} genres={genres} />}
               />
-            }
-          />
-
+              <Route
+                path="/series"
+                element={<Series tvShows={tvShows} genres={genres} />}
+              />
+              <Route
+                path="/brand/:brand"
+                element={<BrandPage genres={genres} />}
+              />
+              <Route
+                path="/movies/:id"
+                element={
+                  <MediaPage
+                    selectedProfile={selectedProfile}
+                    setSelectedProfile={setSelectedProfile}
+                  />
+                }
+              />
+              <Route
+                path="/series/:id"
+                element={
+                  <MediaPage
+                    selectedProfile={selectedProfile}
+                    setSelectedProfile={setSelectedProfile}
+                  />
+                }
+              />
+            </>
+          )}
+  
           <Route
             path="/select-profile"
             element={
@@ -274,6 +288,7 @@ const MainLayout = () => {
       {!showFooter && <Footer />}
     </div>
   );
+  
 };
 
 export default MainLayout;
