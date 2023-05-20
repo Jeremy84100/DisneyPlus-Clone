@@ -3,6 +3,7 @@ import {
   Route,
   Navigate,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Movie, TVShow, Genre, Image, Profile } from "@/types/types";
@@ -201,6 +202,13 @@ const MainLayout = () => {
     location.pathname === "/select-avatar" ||
     location.pathname === "/add-profile";
 
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if (profiles.length === 0 && location.pathname === "/") {
+        navigate("/select-profile");
+      }
+    }, [profiles, location.pathname, navigate]);
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden pt-72px">
