@@ -233,43 +233,43 @@
     "brandPages" : [
         {
             "id": 1,
-            "image": "/src/assets/images/brand/Disney/disney-background-image.jpg",
-            "video": "/src/assets/images/brand/Disney/disney-background-video.mp4",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/61C377B14F25252D8A112D23A89A78516435DCF60F1C151854DE3D91C755A11A/scale?width=1440&aspectRatio=1.78&format=jpeg",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2021/11/04/1636056497-disney.mp4",
             "title": "Disney",
             "link": "/brand/disney"
         },
         {
             "id": 2,
-            "image": "/src/assets/images/brand/Pixar/pixar-background-image.jpg",
-            "video": "/src/assets/images/brand/Pixar/pixar-background-video.mp4",
+            "image": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2021/11/04/1636056639-pixar.mp4",
+            "video": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0CF86F6F281176EFE2F22314CB713B3AFE515C4291EA9AFC6546F1FE42EFB756/scale?width=1440&aspectRatio=1.78&format=jpeg",
             "title": "Pixar",
             "link": "/brand/pixar"
         },
         {
             "id": 3,
-            "image": "/src/assets/images/brand/Marvel/marvel-background-image.jpg",
-            "video": "/src/assets/images/brand/Marvel/marvel-background-video.mp4",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/DA2E198288BFCA56AB53340211B38DE7134E40E4521EDCAFE6FFB8CD69250DE9/scale?width=1440&aspectRatio=1.78&format=jpeg",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2021/11/04/1636056889-marvel.mp4",
             "title": "Marvel",
             "link": "/brand/marvel"
         },
         {
             "id": 4,
-            "image": "/src/assets/images/brand/StarWars/star-wars-background-image.jpg",
-            "video": "/src/assets/images/brand/StarWars/star-wars-background-video.mp4",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2939F39F251515613B87DB083CC248B93D3FA40EA13B8399FC1F6F9B0A07CA31/scale?width=600&aspectRatio=2.00&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2021/11/04/1636056809-star-wars.mp4",
             "title": "Star Wars",
             "link": "/brand/starwars"
         },
         {
             "id": 5,
-            "image": "/src/assets/images/brand/NationalGeographic/national-geographic-background-image.jpg",
-            "video": "/src/assets/images/brand/NationalGeographic/national-geographic-background-video.mp4",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/368CF25E5033AC11C828B2AA2B113942743175E35C5AA7A4F6F6F39E70E5B204/scale?width=1440&aspectRatio=1.78&format=jpeg",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2021/11/04/1636056567-national-geographic.mp4",
             "title": "National Geographic",
             "link": "/brand/nationalgeographic"
         },
         {
             "id": 6,
-            "image": "/src/assets/images/brand/Star/star-background-image.jpg",
-            "video": "/src/assets/images/brand/Star/star-background-video.mp4",
+            "image": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/463D0FF785C5A1E1D9EF486C0812863F381608E9D2AD66DE5BF8648BD9998B97/scale?width=1440&aspectRatio=1.78&format=jpeg",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2020/12/16/1608080788-brand-star.mp4",
             "title": "Star",
             "link": "/brand/star"
         }
@@ -278,43 +278,43 @@
     "brands" : [
         {
             "id": 1,
-            "logo": "/src/assets/images/brand/Disney/disney-logo.png",
-            "video": "/src/assets/images/brand/Disney/disney-logo-background.mp4",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FFA0BEBAC1406D88929497501C84019EBBA1B018D3F7C4C3C829F1810A24AD6E/scale?width=400&aspectRatio=1.78&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2019/08/01/1564674844-disney.mp4",
             "title": "Disney",
             "link": "/brand/disney"
         },
         {
             "id": 2,
-            "logo": "/src/assets/images/brand/Pixar/pixar-logo.png",
-            "video": "/src/assets/images/brand/Pixar/pixar-logo-background.mp4",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/7F4E1A299763030A0A8527227AD2812C049CE3E02822F7EDEFCFA1CFB703DDA5/scale?width=400&aspectRatio=1.78&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2019/08/01/1564676714-pixar.mp4",
             "title": "Pixar",
             "link": "/brand/pixar"
         },
         {
             "id": 3,
-            "logo": "/src/assets/images/brand/Marvel/marvel-logo.png",
-            "video": "/src/assets/images/brand/Marvel/marvel-logo-background.mp4",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/C90088DCAB7EA558159C0A79E4839D46B5302B5521BAB1F76D2E807D9E2C6D9A/scale?width=400&aspectRatio=1.78&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2019/08/01/1564676115-marvel.mp4",
             "title": "Marvel",
             "link": "/brand/marvel"
         },
         {
             "id": 4,
-            "logo": "/src/assets/images/brand/StarWars/star-wars-logo.png",
-            "video": "/src/assets/images/brand/StarWars/star-wars-logo-background.mp4",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A9416D67DC9595496B2666087596EE64DE379272051BB854157C0D938BE2C26/scale?width=400&aspectRatio=1.78&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2020/12/17/1608229455-star-wars.mp4",
             "title": "Star Wars",
             "link": "/brand/starwars"
         },
         {
             "id": 5,
-            "logo": "/src/assets/images/brand/NationalGeographic/national-geographic-logo.png",
-            "video": "/src/assets/images/brand/NationalGeographic/national-geographic-logo-background.mp4",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2EF24AA0A1E648E6D1A3B26491F516632137ED87AB22969D153316F8BD670FB5/scale?width=400&aspectRatio=1.78&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2019/08/01/1564676296-national-geographic.mp4",
             "title": "National Geographic",
             "link": "/brand/nationalgeographic"
         },
         {
             "id": 6,
-            "logo": "/src/assets/images/brand/Star/star-logo.png",
-            "video": "/src/assets/images/brand/Star/star-logo-background.mp4",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/AE893BCDD6264C4A876C03A0DE5004D9F394BE1E8388F085431318CDCEC9A598/scale?width=400&aspectRatio=1.78&format=png",
+            "video": "https://vod-bgc-eu-west-1.media.dssott.com/bgui/ps01/disney/bgui/2020/12/17/1608169994-brand-star.mp4",
             "title": "Star",
             "link": "/brand/star"
         } 
@@ -323,36 +323,36 @@
     "sliderHeaders" : [
         {
             "id": 1,
-            "background": "/src/assets/images/slider-header/the-lion-king/the-lion-king-background.jpg",
-            "logo": "/src/assets/images/slider-header/the-lion-king/the-lion-king-logo.png",
+            "background": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E1774B38D678233ECDB0DC7C766C55639103498FD3256D5C83E70BBBE97C0915/scale?width=1440&aspectRatio=3.91&format=jpeg",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/A2F4DF894395232D18134545C1537C965AA3ED2A624A14BB87E828DE9F67B97F/scale?width=1440&aspectRatio=3.91&format=png",
             "title": "The Lion King",
             "path": "/movies/420818"
         },
         {
             "id": 2,
-            "background": "/src/assets/images/slider-header/the-rescue/the-rescue-background.jpg",
-            "logo": "/src/assets/images/slider-header/the-rescue/the-rescue-logo.png",
+            "background": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/9DD465788439C1821EEF0B60274BDF07539AC6E20D94DF012016E3945981C994/scale?width=1440&aspectRatio=3.91&format=jpeg",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/147262EDD4B242EFFBA1E26FE8E3413392AC256204F3612CCD95F1F198B03B94/scale?width=1440&aspectRatio=3.91&format=png",
             "title": "The Rescue",
             "path": "/movies/The Rescue"
         },
         {
             "id": 3,
-            "background": "/src/assets/images/slider-header/spiderman/spiderman-background.jpg",
-            "logo": "/src/assets/images/slider-header/spiderman/spiderman-logo.png",
+            "background": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/3A4040B29F2FA98F45D16127A38358B088F4D1E10DBF66AE9923DDC677F3207E/scale?width=1440&aspectRatio=3.91&format=jpeg",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D4B403D46D3B4E1584C70317D5DD148E6AEC8C850802E5F39819670CA618AAF5/scale?width=1440&aspectRatio=3.91&format=png",
             "title": "Spiderman",
             "path": "/movies/429617"
         },
         {
             "id": 4,
-            "background": "/src/assets/images/slider-header/peter-pan/peter-pan-background.jpg",
-            "logo": "/src/assets/images/slider-header/peter-pan/peter-pan-logo.png",
+            "background": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/012844177CAF3308B5990EAAC457B2DC0A36413339DFA43C1C0371D6C7927F0B/compose?width=1440&aspectRatio=3.91&format=jpeg&label=disneyplusoriginal_391",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/AB0241D87CB5BA4FD069357C100ECD2F058110F8AB812F1C417673AD801D9D29/scale?width=1440&aspectRatio=3.91&format=png",
             "title": "Peter Pan & Wendy",
             "path": "/movies/420808"
         },
         {
             "id": 5,
-            "background": "/src/assets/images/slider-header/west-side-history/west-side-history-background.jpg",
-            "logo": "/src/assets/images/slider-header/west-side-history/west-side-history-logo.png",
+            "background": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/547D7E3A158D5CAA4568FAD1164B7FF4D93216E08472ABFBB1AF553AC1EB1D69/scale?width=1440&aspectRatio=3.91&format=jpeg",
+            "logo": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/112F7502430E908E55B4A6C3B0FEB584877836E8DAAA9E836A6FD5487046EDF3/scale?width=1440&aspectRatio=3.91&format=png",
             "title": "West Side Story",
             "path": "/movies/511809"
         }
