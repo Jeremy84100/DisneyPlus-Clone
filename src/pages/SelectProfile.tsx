@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import CardProfile from "@/components/layouts/MainLayout/Components/CardProfile";
+import CardProfile from "@/components/CardProfile";
 import { Link } from "react-router-dom";
 
 import { Profile } from "@/types/types";

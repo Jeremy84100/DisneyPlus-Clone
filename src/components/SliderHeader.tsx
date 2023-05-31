@@ -4,52 +4,15 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import lionKingBackground from "@/assets/images/slider-header/the-lion-king/the-lion-king-background.jpg";
-import lionKingLogo from "@/assets/images/slider-header/the-lion-king/the-lion-king-logo.png";
-import theRescueBackground from "@/assets/images/slider-header/the-rescue/the-rescue-background.jpg";
-import theRescueLogo from "@/assets/images/slider-header/the-rescue/the-rescue-logo.png";
-import spidermanBackground from "@/assets/images/slider-header/spiderman/spiderman-background.jpg";
-import spidermanLogo from "@/assets/images/slider-header/spiderman/spiderman-logo.png";
-import peterPanBackground from "@/assets/images/slider-header/peter-pan/peter-pan-background.jpg";
-import peterPanLogo from "@/assets/images/slider-header/peter-pan/peter-pan-logo.png";
-import westSideHistoryBackground from "@/assets/images/slider-header/west-side-history/west-side-history-background.jpg";
-import westSideHistoryLogo from "@/assets/images/slider-header/west-side-history/west-side-history-logo.png";
+import jsonData from "@/utils/data.json";
+
+import { SliderHeaders } from "@/types/types";
 
 const SliderHeader = () => {
-  const SliderHeaderData = [
-    {
-      background: lionKingBackground,
-      logo: lionKingLogo,
-      title: "The Lion King",
-      path: "/movies/420818"
-    },
-    {
-      background: theRescueBackground,
-      logo: theRescueLogo,
-      title: "The Rescue",
-      path: "/movies/680058"
-    },
-    {
-      background: spidermanBackground,
-      logo: spidermanLogo,
-      title: "Spiderman",
-      path: "/movies/429617"
-    },
-    {
-      background: peterPanBackground,
-      logo: peterPanLogo,
-      title: "Peter Pan & Wendy",
-      path: "/movies/420808"
-    },
-    {
-      background: westSideHistoryBackground,
-      logo: westSideHistoryLogo,
-      title: "West Side Story",
-      path: "/movies/511809"
-    },
-  ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const SliderHeaderData : SliderHeaders[] = jsonData.sliderHeaders;
 
   const handleSlideChange = (currentSlide: number) => {
     const logos = document.querySelectorAll(".carousel-logo");

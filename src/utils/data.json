@@ -228,5 +228,133 @@
             "alt": "Yoda",
             "category": "Star Wars"
         }
+    ],
+
+    "brandPages" : [
+        {
+            "id": 1,
+            "image": "/src/assets/images/brand/Disney/disney-background-image.jpg",
+            "video": "/src/assets/images/brand/Disney/disney-background-video.mp4",
+            "title": "Disney",
+            "link": "/brand/disney"
+        },
+        {
+            "id": 2,
+            "image": "/src/assets/images/brand/Pixar/pixar-background-image.jpg",
+            "video": "/src/assets/images/brand/Pixar/pixar-background-video.mp4",
+            "title": "Pixar",
+            "link": "/brand/pixar"
+        },
+        {
+            "id": 3,
+            "image": "/src/assets/images/brand/Marvel/marvel-background-image.jpg",
+            "video": "/src/assets/images/brand/Marvel/marvel-background-video.mp4",
+            "title": "Marvel",
+            "link": "/brand/marvel"
+        },
+        {
+            "id": 4,
+            "image": "/src/assets/images/brand/StarWars/star-wars-background-image.jpg",
+            "video": "/src/assets/images/brand/StarWars/star-wars-background-video.mp4",
+            "title": "Star Wars",
+            "link": "/brand/starwars"
+        },
+        {
+            "id": 5,
+            "image": "/src/assets/images/brand/NationalGeographic/national-geographic-background-image.jpg",
+            "video": "/src/assets/images/brand/NationalGeographic/national-geographic-background-video.mp4",
+            "title": "National Geographic",
+            "link": "/brand/nationalgeographic"
+        },
+        {
+            "id": 6,
+            "image": "/src/assets/images/brand/Star/star-background-image.jpg",
+            "video": "/src/assets/images/brand/Star/star-background-video.mp4",
+            "title": "Star",
+            "link": "/brand/star"
+        }
+    ],
+
+    "brands" : [
+        {
+            "id": 1,
+            "logo": "/src/assets/images/brand/Disney/disney-logo.png",
+            "video": "/src/assets/images/brand/Disney/disney-logo-background.mp4",
+            "title": "Disney",
+            "link": "/brand/disney"
+        },
+        {
+            "id": 2,
+            "logo": "/src/assets/images/brand/Pixar/pixar-logo.png",
+            "video": "/src/assets/images/brand/Pixar/pixar-logo-background.mp4",
+            "title": "Pixar",
+            "link": "/brand/pixar"
+        },
+        {
+            "id": 3,
+            "logo": "/src/assets/images/brand/Marvel/marvel-logo.png",
+            "video": "/src/assets/images/brand/Marvel/marvel-logo-background.mp4",
+            "title": "Marvel",
+            "link": "/brand/marvel"
+        },
+        {
+            "id": 4,
+            "logo": "/src/assets/images/brand/StarWars/star-wars-logo.png",
+            "video": "/src/assets/images/brand/StarWars/star-wars-logo-background.mp4",
+            "title": "Star Wars",
+            "link": "/brand/starwars"
+        },
+        {
+            "id": 5,
+            "logo": "/src/assets/images/brand/NationalGeographic/national-geographic-logo.png",
+            "video": "/src/assets/images/brand/NationalGeographic/national-geographic-logo-background.mp4",
+            "title": "National Geographic",
+            "link": "/brand/nationalgeographic"
+        },
+        {
+            "id": 6,
+            "logo": "/src/assets/images/brand/Star/star-logo.png",
+            "video": "/src/assets/images/brand/Star/star-logo-background.mp4",
+            "title": "Star",
+            "link": "/brand/star"
+        } 
+    ],
+
+    "sliderHeaders" : [
+        {
+            "id": 1,
+            "background": "/src/assets/images/slider-header/the-lion-king/the-lion-king-background.jpg",
+            "logo": "/src/assets/images/slider-header/the-lion-king/the-lion-king-logo.png",
+            "title": "The Lion King",
+            "path": "/movies/420818"
+        },
+        {
+            "id": 2,
+            "background": "/src/assets/images/slider-header/the-rescue/the-rescue-background.jpg",
+            "logo": "/src/assets/images/slider-header/the-rescue/the-rescue-logo.png",
+            "title": "The Rescue",
+            "path": "/movies/The Rescue"
+        },
+        {
+            "id": 3,
+            "background": "/src/assets/images/slider-header/spiderman/spiderman-background.jpg",
+            "logo": "/src/assets/images/slider-header/spiderman/spiderman-logo.png",
+            "title": "Spiderman",
+            "path": "/movies/429617"
+        },
+        {
+            "id": 4,
+            "background": "/src/assets/images/slider-header/peter-pan/peter-pan-background.jpg",
+            "logo": "/src/assets/images/slider-header/peter-pan/peter-pan-logo.png",
+            "title": "Peter Pan & Wendy",
+            "path": "/movies/420808"
+        },
+        {
+            "id": 5,
+            "background": "/src/assets/images/slider-header/west-side-history/west-side-history-background.jpg",
+            "logo": "/src/assets/images/slider-header/west-side-history/west-side-history-logo.png",
+            "title": "West Side Story",
+            "path": "/movies/511809"
+        }
     ]
 }

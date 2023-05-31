@@ -1,5 +1,5 @@
-import Card from "@/components/layouts/MainLayout/Components/Card";
-import Filters from "@/components/layouts/MainLayout/Components/Filters";
+import Card from "@/components/Card";
+import Filters from "@/components/Filters";
 import { useState } from "react";
 
 import { Movie, Genre } from "@/types/types";

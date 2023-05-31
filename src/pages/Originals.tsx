@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import originals from "@/assets/images/ORIGINALS.png";
-import Category from "@/components/layouts/MainLayout/Components/Category";
+import Category from "@/components/Category";
 
 const Originals = ({ genres }: { genres: any }) => {
   const [scrolled, setScrolled] = useState(false);

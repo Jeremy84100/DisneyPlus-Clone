@@ -76,6 +76,31 @@ export interface Image {
   category: string;
 }
 
+export interface BrandPages {
+  id: number;
+  image: string;
+  video: string;
+  link: string;
+  title: string;
+}
+
+export interface Brands {
+  id: number;
+  logo: string;
+  video: string;
+  title: string;
+  link: string;
+}
+
+
+export interface SliderHeaders {
+  id: number;
+  background: string;
+  logo: string;
+  title: string;
+  path: string;
+}
+
 export interface Profile {
   image: Image;
   name: string;

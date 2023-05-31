@@ -1,5 +1,5 @@
 import emptyWatchlistIcon from "@/assets/images/empty-watchlist-icon.svg";
-import Card from "@/components/layouts/MainLayout/Components/Card";
+import Card from "@/components/Card";
 
 import { Profile } from "@/types/types";
 

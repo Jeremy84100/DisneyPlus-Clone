@@ -1,30 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import data from "@/utils/data.json";
 
-import Category from "@/components/layouts/MainLayout/Components/Category";
-
-import disneyImage from "@/assets/images/brand/Disney/disney-background-image.jpg";
-import disneyVideo from "@/assets/images/brand/Disney/disney-background-video.mp4";
-import pixarImage from "@/assets/images/brand/Pixar/pixar-background-image.jpg";
-import pixarVideo from "@/assets/images/brand/Pixar/pixar-background-video.mp4";
-import marvelImage from "@/assets/images/brand/Marvel/marvel-background-image.jpg";
-import marvelVideo from "@/assets/images/brand/Marvel/marvel-background-video.mp4";
-import starwarsImage from "@/assets/images/brand/StarWars/star-wars-background-image.jpg";
-import starwarsVideo from "@/assets/images/brand/StarWars/star-wars-background-video.mp4";
-import nationalgeographicImage from "@/assets/images/brand/NationalGeographic/national-geographic-background-image.jpg";
-import nationalgeographicVideo from "@/assets/images/brand/NationalGeographic/national-geographic-background-video.mp4";
-import starImage from "@/assets/images/brand/Star/star-background-image.jpg";
-import starVideo from "@/assets/images/brand/Star/star-background-video.mp4";
-
+import Category from "@/components/Category";
 import brandBackground from "@/assets/images/brand/brand-background.png";
 
-interface BrandData {
-  image: string;
-  video: string;
-  title: string;
-  link: string;
-}
+import { BrandPages } from "@/types/types";
 
 const BrandPage = ({ genres }: { genres: any }) => {
   const { brand } = useParams<{ brand: string }>();
@@ -62,44 +44,7 @@ const BrandPage = ({ genres }: { genres: any }) => {
     setVideoEnded(true);
   };
 
-  const brandData: BrandData[] = [
-    {
-      image: disneyImage,
-      video: disneyVideo,
-      title: "Disney",
-      link: "/brand/disney",
-    },
-    {
-      image: pixarImage,
-      video: pixarVideo,
-      title: "Pixar",
-      link: "/brand/pixar",
-    },
-    {
-      image: marvelImage,
-      video: marvelVideo,
-      title: "Marvel",
-      link: "/brand/marvel",
-    },
-    {
-      image: starwarsImage,
-      video: starwarsVideo,
-      title: "Star Wars",
-      link: "/brand/starwars",
-    },
-    {
-      image: nationalgeographicImage,
-      video: nationalgeographicVideo,
-      title: "National Geographic",
-      link: "/brand/nationalgeographic",
-    },
-    {
-      image: starImage,
-      video: starVideo,
-      title: "Star",
-      link: "/brand/star",
-    },
-  ];
+  const brandData: BrandPages[] = data.brandPages;
 
   const selectedBrand = brandData.find((b) => b.link === `/brand/${brand}`);
 

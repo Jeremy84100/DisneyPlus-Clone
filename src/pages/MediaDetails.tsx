@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
-import Card from "@/components/layouts/MainLayout/Components/Card";
-import CardExtras from "@/components/layouts/MainLayout/Components/CardExtras";
+import Card from "@/components/Card";
+import CardExtras from "@/components/CardExtras";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

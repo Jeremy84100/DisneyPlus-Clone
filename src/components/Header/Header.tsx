@@ -2,7 +2,6 @@ import Menu from "./Menu/Menu";
 
 import { Profile } from "@/types/types";
 
-
 interface Props {
   selectedProfile: Profile;
   profiles: Profile[];

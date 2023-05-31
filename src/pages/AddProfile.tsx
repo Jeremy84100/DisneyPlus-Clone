@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import CardProfile from "@/components/layouts/MainLayout/Components/CardProfile";
+import CardProfile from "@/components/CardProfile";
 
 import { Image, Profile } from "@/types/types";
 

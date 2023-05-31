@@ -7,13 +7,11 @@ import ProfileMenu from "../ProfileMenu/ProfileMenu";
 
 import { Profile } from "@/types/types";
 
-
 interface Props {
   selectedProfile: Profile;
   profiles: Profile[];
   handleSelectedProfile: (profile: Profile | undefined) => void;
 }
-
 
 const Menu = ({ selectedProfile, profiles, handleSelectedProfile }: Props) => {
   const [scrolled, setScrolled] = useState(false);
@@ -130,7 +128,11 @@ const Menu = ({ selectedProfile, profiles, handleSelectedProfile }: Props) => {
           ))}
         </span>
       </Responsive>
-      <ProfileMenu selectedProfile={selectedProfile} profiles={profiles} handleSelectedProfile={handleSelectedProfile} />
+      <ProfileMenu
+        selectedProfile={selectedProfile}
+        profiles={profiles}
+        handleSelectedProfile={handleSelectedProfile}
+      />
     </div>
   );
 };

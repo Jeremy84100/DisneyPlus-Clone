@@ -1,6 +1,6 @@
-import Brand from "@/components/layouts/MainLayout/Components/Brand";
-import Category from "@/components/layouts/MainLayout/Components/Category";
-import SliderHeader from "@/components/layouts/MainLayout/Components/SliderHeader";
+import Brand from "@/components/Brand";
+import Category from "@/components/Category";
+import SliderHeader from "@/components/SliderHeader";
 
 
 const Home = ({ genres }: { genres: any }) => {

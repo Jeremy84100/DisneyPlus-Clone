@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import SearchBar from "@/components/layouts/MainLayout/Components/SearchBar";
-import Card from "@/components/layouts/MainLayout/Components/Card";
+import SearchBar from "@/components/SearchBar";
+import Card from "@/components/Card";
 
 import { Movie } from "@/types/types";
 

@@ -8,9 +8,9 @@ import {
 import { useState, useEffect } from "react";
 import { Movie, TVShow, Genre, Image, Profile } from "@/types/types";
 
-import HeaderProfile from "./Components/HeaderProfile";
-import Header from "./Components/Header/Header";
-import Background from "./Components/Background";
+import HeaderProfile from "@/components/HeaderProfile";
+import Header from "@/components/Header/Header";
+import Background from "@/components/Background";
 
 import Home from "@/pages/Home";
 import Search from "@/pages/Search";
@@ -26,7 +26,7 @@ import SelectProfile from "@/pages/SelectProfile";
 import SelectAvatar from "@/pages/SelectAvatar";
 import AddProfile from "@/pages/AddProfile";
 
-import Footer from "./Components/Footer";
+import Footer from "@/components/Footer";
 
 const MainLayout = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -202,13 +202,13 @@ const MainLayout = () => {
     location.pathname === "/select-avatar" ||
     location.pathname === "/add-profile";
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-      if (profiles.length === 0 && location.pathname === "/") {
-        navigate("/select-profile");
-      }
-    }, [profiles, location.pathname, navigate]);
+  useEffect(() => {
+    if (profiles.length === 0 && location.pathname === "/") {
+      navigate("/select-profile");
+    }
+  }, [profiles, location.pathname, navigate]);
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden pt-72px">
@@ -231,7 +231,10 @@ const MainLayout = () => {
                 path="/watchlist"
                 element={<Watchlist selectedProfile={selectedProfile} />}
               />
-              <Route path="/originals" element={<Originals genres={genres} />} />
+              <Route
+                path="/originals"
+                element={<Originals genres={genres} />}
+              />
               <Route
                 path="/movies"
                 element={<Movies movies={movies} genres={genres} />}
@@ -264,7 +267,7 @@ const MainLayout = () => {
               />
             </>
           )}
-  
+
           <Route
             path="/select-profile"
             element={
@@ -296,7 +299,6 @@ const MainLayout = () => {
       {!showFooter && <Footer />}
     </div>
   );
-  
 };
 
 export default MainLayout;
