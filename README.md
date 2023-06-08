@@ -40,4 +40,4 @@ This is a clone of the Disney+ website created using React, Vite, TypeScript, Ta
 
 ## Author
 
-DisneyPlus-Clone was created by BOURRET Jérémy and is available on https://github.com/Jeremy84100/Game-Zone.
+DisneyPlus-Clone was created by BOURRET Jérémy and is available on https://github.com/Jeremy84100/DisneyPlus-Clone.
